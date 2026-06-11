@@ -63,6 +63,12 @@ Function Reload() global
 EndFunction
 
 Function OnOSFScene(string asEvent, Actor[] akActors, int aiStage) global
+    ; Climax once, on scene end, instead of a per-loop stage-3 cue: this stays
+    ; correct no matter how high a stage's loop count is raised. akActors[0] is
+    ; the bottom (moaning) actor; "$moan_loud" resolves against the pack's pool.
+    if asEvent == "end" && akActors.Length > 0
+        SFW.PlaySound(akActors[0], "$moan_loud", 1.0)
+    endif
     Debug.Trace("OSFSeduce.OnOSFScene: " + asEvent + " stage=" + aiStage + " actors=" + akActors.Length)
 EndFunction
 

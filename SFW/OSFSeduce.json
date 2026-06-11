@@ -47,20 +47,37 @@
     {
       "id": "osf_seduce_bridge",
       "name": "Seduce Bridge",
-      "tags": ["osf", "seduce", "paired", "bridge"],
+      "tags": [
+        "osf",
+        "seduce",
+        "paired",
+        "bridge"
+      ],
       "actors": [
         {
           "stages": [
-            { "file": "OSF/Seduce/Animations/bridge01bot.glb" },
-            { "file": "OSF/Seduce/Animations/bridge02bot.glb" },
-            { "file": "OSF/Seduce/Animations/bridge03bot.glb" }
+            {
+              "file": "OSF/Seduce/Animations/bridge01bot.glb"
+            },
+            {
+              "file": "OSF/Seduce/Animations/bridge02bot.glb"
+            },
+            {
+              "file": "OSF/Seduce/Animations/bridge03bot.glb"
+            }
           ]
         },
         {
           "stages": [
-            { "file": "OSF/Seduce/Animations/bridge01top.glb" },
-            { "file": "OSF/Seduce/Animations/bridge02top.glb" },
-            { "file": "OSF/Seduce/Animations/bridge03top.glb" }
+            {
+              "file": "OSF/Seduce/Animations/bridge01top.glb"
+            },
+            {
+              "file": "OSF/Seduce/Animations/bridge02top.glb"
+            },
+            {
+              "file": "OSF/Seduce/Animations/bridge03top.glb"
+            }
           ]
         }
       ],
@@ -68,61 +85,280 @@
         {
           "loops": 1,
           "cues": [
-            { "time": 0.25, "event": "moan_med", "actor": 0, "sound": "$moan_med" },
-            { "time": 2.125, "event": "moan_short", "actor": 0, "sound": "$moan_short" },
-            { "time": 4.0, "event": "moan_med", "actor": 0, "sound": "$moan_med" },
-            { "time": 5.7, "event": "moan_short", "actor": 0, "sound": "$moan_short" },
-            { "time": 7.4, "event": "moan_med", "actor": 0, "sound": "$moan_med" },
-            { "time": 9.1, "event": "moan_med", "actor": 0, "sound": "$moan_med" },
-            { "time": 10.8, "event": "moan_short", "actor": 0, "sound": "$moan_short" },
-            { "time": 12.2, "event": "moan_short", "actor": 0, "sound": "$moan_short" },
-            { "time": 13.45, "event": "moan_short", "actor": 0, "sound": "$moan_short" },
-            { "time": 14.7, "event": "moan_short", "actor": 0, "sound": "$moan_short" },
-            { "time": 15.95, "event": "moan_short", "actor": 0, "sound": "$moan_short" },
-            { "time": 17.2, "event": "moan_short", "actor": 0, "sound": "$moan_short" }
+            {
+              "time": 0.25,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 2.125,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 4.0,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 5.7,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 7.4,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 9.1,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 10.8,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 12.2,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 13.45,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 14.7,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 15.95,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 17.2,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            }
           ]
         },
         {
           "loops": 1,
           "cues": [
-            { "time": 0.625, "event": "moan_short", "actor": 0, "sound": "$moan_short" },
-            { "time": 1.875, "event": "moan_short", "actor": 0, "sound": "$moan_short" },
-            { "time": 3.125, "event": "moan_short", "actor": 0, "sound": "$moan_short" },
-            { "time": 4.375, "event": "moan_short", "actor": 0, "sound": "$moan_short" },
-            { "time": 5.625, "event": "moan_short", "actor": 0, "sound": "$moan_short" },
-            { "time": 6.875, "event": "moan_short", "actor": 0, "sound": "$moan_short" },
-            { "time": 8.125, "event": "moan_short", "actor": 0, "sound": "$moan_short" },
-            { "time": 9.325, "event": "moan_short", "actor": 0, "sound": "$moan_short" },
-            { "time": 10.325, "event": "moan_short", "actor": 0, "sound": "$moan_short" },
-            { "time": 11.325, "event": "moan_short", "actor": 0, "sound": "$moan_short" },
-            { "time": 12.325, "event": "moan_loud", "actor": 0, "sound": "$moan_loud" },
-            { "time": 13.155, "event": "moan_loud", "actor": 0, "sound": "$moan_loud" },
-            { "time": 13.985, "event": "moan_loud", "actor": 0, "sound": "$moan_loud" },
-            { "time": 14.815, "event": "moan_loud", "actor": 0, "sound": "$moan_loud" },
-            { "time": 15.645, "event": "moan_short", "actor": 0, "sound": "$moan_short" },
-            { "time": 16.645, "event": "moan_loud", "actor": 0, "sound": "$moan_loud" },
-            { "time": 17.945, "event": "moan_loud", "actor": 0, "sound": "$moan_loud" },
-            { "time": 19.195, "event": "moan_short", "actor": 0, "sound": "$moan_short" }
+            {
+              "time": 0.625,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 1.875,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 3.125,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 4.375,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 5.625,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 6.875,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 8.125,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 9.325,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 10.325,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 11.325,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 12.325,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 13.155,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 13.985,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 14.815,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 15.645,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 16.645,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 17.945,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 19.195,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            }
           ]
         },
         {
           "loops": 1,
           "cues": [
-            { "time": 1.0, "event": "moan_loud", "actor": 0, "sound": "$moan_loud" },
-            { "time": 2.0, "event": "moan_loud", "actor": 0, "sound": "$moan_loud" },
-            { "time": 4.0, "event": "moan_loud", "actor": 0, "sound": "$moan_loud" },
-            { "time": 5.0, "event": "moan_loud", "actor": 0, "sound": "$moan_loud" },
-            { "time": 6.5, "event": "moan_loud", "actor": 0, "sound": "$moan_loud" },
-            { "time": 7.5, "event": "moan_med", "actor": 0, "sound": "$moan_med" },
-            { "time": 9.5, "event": "moan_loud", "actor": 0, "sound": "$moan_loud" },
-            { "time": 10.5, "event": "moan_loud", "actor": 0, "sound": "$moan_loud" },
-            { "time": 11.5, "event": "moan_loud", "actor": 0, "sound": "$moan_loud" },
-            { "time": 13.0, "event": "moan_loud", "actor": 0, "sound": "$moan_loud" },
-            { "time": 14.0, "event": "moan_loud", "actor": 0, "sound": "$moan_loud" },
-            { "time": 15.0, "event": "moan_med", "actor": 0, "sound": "$moan_med" },
-            { "time": 16.75, "event": "moan_loud", "actor": 0, "sound": "$moan_loud" },
-            { "time": 17.75, "event": "moan_loud", "actor": 0, "sound": "$moan_loud" },
-            { "time": 19.25, "event": "orgasm", "actor": 0 }
+            {
+              "time": 1.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 2.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 4.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 5.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 6.5,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 7.5,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 9.5,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 10.5,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 11.5,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 13.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 14.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 15.0,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 16.75,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 17.75,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            }
           ]
         }
       ]
@@ -130,209 +366,2553 @@
     {
       "id": "osf_seduce_downdog",
       "name": "Seduce Down Dog",
-      "tags": ["osf", "seduce", "paired", "downdog"],
+      "tags": [
+        "osf",
+        "seduce",
+        "paired",
+        "downdog"
+      ],
       "actors": [
         {
           "stages": [
-            { "file": "OSF/Seduce/Animations/downdog01bot.glb" },
-            { "file": "OSF/Seduce/Animations/downdog02bot.glb" },
-            { "file": "OSF/Seduce/Animations/downdog03bot.glb" }
+            {
+              "file": "OSF/Seduce/Animations/downdog01bot.glb"
+            },
+            {
+              "file": "OSF/Seduce/Animations/downdog02bot.glb"
+            },
+            {
+              "file": "OSF/Seduce/Animations/downdog03bot.glb"
+            }
           ]
         },
         {
           "stages": [
-            { "file": "OSF/Seduce/Animations/downdog01top.glb" },
-            { "file": "OSF/Seduce/Animations/downdog02top.glb" },
-            { "file": "OSF/Seduce/Animations/downdog03top.glb" }
+            {
+              "file": "OSF/Seduce/Animations/downdog01top.glb"
+            },
+            {
+              "file": "OSF/Seduce/Animations/downdog02top.glb"
+            },
+            {
+              "file": "OSF/Seduce/Animations/downdog03top.glb"
+            }
           ]
         }
       ],
       "stages": [
-        { "loops": 1 },
-        { "loops": 1 },
-        { "loops": 1 }
+        {
+          "loops": 1,
+          "cues": [
+            {
+              "time": 0.25,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 2.125,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 4.0,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 5.7,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 7.4,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 9.1,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 10.8,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 12.2,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 13.45,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 14.7,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 15.95,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 17.2,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            }
+          ]
+        },
+        {
+          "loops": 1,
+          "cues": [
+            {
+              "time": 0.625,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 1.875,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 3.125,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 4.375,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 5.625,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 6.875,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 8.125,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 9.325,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 10.325,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 11.325,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 12.325,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 13.155,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 13.985,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 14.815,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 15.645,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 16.645,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 17.945,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 19.195,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            }
+          ]
+        },
+        {
+          "loops": 1,
+          "cues": [
+            {
+              "time": 1.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 2.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 4.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 5.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 6.5,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 7.5,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 9.5,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 10.5,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 11.5,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 13.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 14.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 15.0,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 16.75,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 17.75,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            }
+          ]
+        }
       ]
     },
     {
       "id": "osf_seduce_eagle",
       "name": "Seduce Eagle",
-      "tags": ["osf", "seduce", "paired", "eagle"],
+      "tags": [
+        "osf",
+        "seduce",
+        "paired",
+        "eagle"
+      ],
       "actors": [
         {
           "stages": [
-            { "file": "OSF/Seduce/Animations/eagle01bot.glb" },
-            { "file": "OSF/Seduce/Animations/eagle02bot.glb" },
-            { "file": "OSF/Seduce/Animations/eagle03bot.glb" }
+            {
+              "file": "OSF/Seduce/Animations/eagle01bot.glb"
+            },
+            {
+              "file": "OSF/Seduce/Animations/eagle02bot.glb"
+            },
+            {
+              "file": "OSF/Seduce/Animations/eagle03bot.glb"
+            }
           ]
         },
         {
           "stages": [
-            { "file": "OSF/Seduce/Animations/eagle01top.glb" },
-            { "file": "OSF/Seduce/Animations/eagle02top.glb" },
-            { "file": "OSF/Seduce/Animations/eagle03top.glb" }
+            {
+              "file": "OSF/Seduce/Animations/eagle01top.glb"
+            },
+            {
+              "file": "OSF/Seduce/Animations/eagle02top.glb"
+            },
+            {
+              "file": "OSF/Seduce/Animations/eagle03top.glb"
+            }
           ]
         }
       ],
       "stages": [
-        { "loops": 1 },
-        { "loops": 1 },
-        { "loops": 1 }
+        {
+          "loops": 1,
+          "cues": [
+            {
+              "time": 0.25,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 2.125,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 4.0,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 5.7,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 7.4,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 9.1,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 10.8,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 12.2,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 13.45,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 14.7,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 15.95,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 17.2,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            }
+          ]
+        },
+        {
+          "loops": 1,
+          "cues": [
+            {
+              "time": 0.625,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 1.875,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 3.125,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 4.375,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 5.625,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 6.875,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 8.125,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 9.325,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 10.325,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 11.325,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 12.325,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 13.155,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 13.985,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 14.815,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 15.645,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 16.645,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 17.945,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 19.195,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            }
+          ]
+        },
+        {
+          "loops": 1,
+          "cues": [
+            {
+              "time": 1.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 2.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 4.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 5.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 6.5,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 7.5,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 9.5,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 10.5,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 11.5,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 13.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 14.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 15.0,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 16.75,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 17.75,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            }
+          ]
+        }
       ]
     },
     {
       "id": "osf_seduce_custom01",
       "name": "Seduce Custom 01",
-      "tags": ["osf", "seduce", "paired", "custom"],
+      "tags": [
+        "osf",
+        "seduce",
+        "paired",
+        "custom"
+      ],
       "actors": [
         {
           "stages": [
-            { "file": "OSF/Seduce/Animations/custom01x01bot.glb" },
-            { "file": "OSF/Seduce/Animations/custom01x02bot.glb" },
-            { "file": "OSF/Seduce/Animations/custom01x03bot.glb" }
+            {
+              "file": "OSF/Seduce/Animations/custom01x01bot.glb"
+            },
+            {
+              "file": "OSF/Seduce/Animations/custom01x02bot.glb"
+            },
+            {
+              "file": "OSF/Seduce/Animations/custom01x03bot.glb"
+            }
           ]
         },
         {
           "stages": [
-            { "file": "OSF/Seduce/Animations/custom01x01top.glb" },
-            { "file": "OSF/Seduce/Animations/custom01x02top.glb" },
-            { "file": "OSF/Seduce/Animations/custom01x03top.glb" }
+            {
+              "file": "OSF/Seduce/Animations/custom01x01top.glb"
+            },
+            {
+              "file": "OSF/Seduce/Animations/custom01x02top.glb"
+            },
+            {
+              "file": "OSF/Seduce/Animations/custom01x03top.glb"
+            }
           ]
         }
       ],
       "stages": [
-        { "loops": 1 },
-        { "loops": 1 },
-        { "loops": 1 }
+        {
+          "loops": 1,
+          "cues": [
+            {
+              "time": 0.25,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 2.125,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 4.0,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 5.7,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 7.4,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 9.1,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 10.8,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 12.2,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 13.45,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 14.7,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 15.95,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 17.2,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            }
+          ]
+        },
+        {
+          "loops": 1,
+          "cues": [
+            {
+              "time": 0.625,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 1.875,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 3.125,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 4.375,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 5.625,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 6.875,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 8.125,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 9.325,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 10.325,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 11.325,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 12.325,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 13.155,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 13.985,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 14.815,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 15.645,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 16.645,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 17.945,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 19.195,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            }
+          ]
+        },
+        {
+          "loops": 1,
+          "cues": [
+            {
+              "time": 1.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 2.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 4.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 5.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 6.5,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 7.5,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 9.5,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 10.5,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 11.5,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 13.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 14.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 15.0,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 16.75,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 17.75,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            }
+          ]
+        }
       ]
     },
     {
       "id": "osf_seduce_custom02",
       "name": "Seduce Custom 02",
-      "tags": ["osf", "seduce", "paired", "custom"],
+      "tags": [
+        "osf",
+        "seduce",
+        "paired",
+        "custom"
+      ],
       "actors": [
         {
           "stages": [
-            { "file": "OSF/Seduce/Animations/custom02x01bot.glb" },
-            { "file": "OSF/Seduce/Animations/custom02x02bot.glb" },
-            { "file": "OSF/Seduce/Animations/custom02x03bot.glb" }
+            {
+              "file": "OSF/Seduce/Animations/custom02x01bot.glb"
+            },
+            {
+              "file": "OSF/Seduce/Animations/custom02x02bot.glb"
+            },
+            {
+              "file": "OSF/Seduce/Animations/custom02x03bot.glb"
+            }
           ]
         },
         {
           "stages": [
-            { "file": "OSF/Seduce/Animations/custom02x01top.glb" },
-            { "file": "OSF/Seduce/Animations/custom02x02top.glb" },
-            { "file": "OSF/Seduce/Animations/custom02x03top.glb" }
+            {
+              "file": "OSF/Seduce/Animations/custom02x01top.glb"
+            },
+            {
+              "file": "OSF/Seduce/Animations/custom02x02top.glb"
+            },
+            {
+              "file": "OSF/Seduce/Animations/custom02x03top.glb"
+            }
           ]
         }
       ],
       "stages": [
-        { "loops": 1 },
-        { "loops": 1 },
-        { "loops": 1 }
+        {
+          "loops": 1,
+          "cues": [
+            {
+              "time": 0.25,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 2.125,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 4.0,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 5.7,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 7.4,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 9.1,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 10.8,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 12.2,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 13.45,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 14.7,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 15.95,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 17.2,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            }
+          ]
+        },
+        {
+          "loops": 1,
+          "cues": [
+            {
+              "time": 0.625,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 1.875,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 3.125,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 4.375,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 5.625,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 6.875,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 8.125,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 9.325,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 10.325,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 11.325,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 12.325,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 13.155,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 13.985,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 14.815,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 15.645,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 16.645,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 17.945,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 19.195,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            }
+          ]
+        },
+        {
+          "loops": 1,
+          "cues": [
+            {
+              "time": 1.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 2.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 4.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 5.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 6.5,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 7.5,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 9.5,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 10.5,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 11.5,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 13.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 14.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 15.0,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 16.75,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 17.75,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            }
+          ]
+        }
       ]
     },
     {
       "id": "osf_seduce_custom03",
       "name": "Seduce Custom 03",
-      "tags": ["osf", "seduce", "paired", "custom"],
+      "tags": [
+        "osf",
+        "seduce",
+        "paired",
+        "custom"
+      ],
       "actors": [
         {
           "stages": [
-            { "file": "OSF/Seduce/Animations/custom03x01bot.glb" },
-            { "file": "OSF/Seduce/Animations/custom03x02bot.glb" },
-            { "file": "OSF/Seduce/Animations/custom03x03bot.glb" }
+            {
+              "file": "OSF/Seduce/Animations/custom03x01bot.glb"
+            },
+            {
+              "file": "OSF/Seduce/Animations/custom03x02bot.glb"
+            },
+            {
+              "file": "OSF/Seduce/Animations/custom03x03bot.glb"
+            }
           ]
         },
         {
           "stages": [
-            { "file": "OSF/Seduce/Animations/custom03x01top.glb" },
-            { "file": "OSF/Seduce/Animations/custom03x02top.glb" },
-            { "file": "OSF/Seduce/Animations/custom03x03top.glb" }
+            {
+              "file": "OSF/Seduce/Animations/custom03x01top.glb"
+            },
+            {
+              "file": "OSF/Seduce/Animations/custom03x02top.glb"
+            },
+            {
+              "file": "OSF/Seduce/Animations/custom03x03top.glb"
+            }
           ]
         }
       ],
       "stages": [
-        { "loops": 1 },
-        { "loops": 1 },
-        { "loops": 1 }
+        {
+          "loops": 1,
+          "cues": [
+            {
+              "time": 0.25,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 2.125,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 4.0,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 5.7,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 7.4,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 9.1,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 10.8,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 12.2,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 13.45,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 14.7,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 15.95,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 17.2,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            }
+          ]
+        },
+        {
+          "loops": 1,
+          "cues": [
+            {
+              "time": 0.625,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 1.875,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 3.125,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 4.375,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 5.625,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 6.875,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 8.125,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 9.325,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 10.325,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 11.325,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 12.325,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 13.155,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 13.985,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 14.815,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 15.645,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 16.645,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 17.945,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 19.195,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            }
+          ]
+        },
+        {
+          "loops": 1,
+          "cues": [
+            {
+              "time": 1.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 2.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 4.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 5.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 6.5,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 7.5,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 9.5,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 10.5,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 11.5,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 13.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 14.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 15.0,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 16.75,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 17.75,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            }
+          ]
+        }
       ]
     },
     {
       "id": "osf_seduce_custom04",
       "name": "Seduce Custom 04",
-      "tags": ["osf", "seduce", "paired", "custom"],
+      "tags": [
+        "osf",
+        "seduce",
+        "paired",
+        "custom"
+      ],
       "actors": [
         {
           "stages": [
-            { "file": "OSF/Seduce/Animations/custom04x01bot.glb" },
-            { "file": "OSF/Seduce/Animations/custom04x02bot.glb" },
-            { "file": "OSF/Seduce/Animations/custom04x03bot.glb" }
+            {
+              "file": "OSF/Seduce/Animations/custom04x01bot.glb"
+            },
+            {
+              "file": "OSF/Seduce/Animations/custom04x02bot.glb"
+            },
+            {
+              "file": "OSF/Seduce/Animations/custom04x03bot.glb"
+            }
           ]
         },
         {
           "stages": [
-            { "file": "OSF/Seduce/Animations/custom04x01top.glb" },
-            { "file": "OSF/Seduce/Animations/custom04x02top.glb" },
-            { "file": "OSF/Seduce/Animations/custom04x03top.glb" }
+            {
+              "file": "OSF/Seduce/Animations/custom04x01top.glb"
+            },
+            {
+              "file": "OSF/Seduce/Animations/custom04x02top.glb"
+            },
+            {
+              "file": "OSF/Seduce/Animations/custom04x03top.glb"
+            }
           ]
         }
       ],
       "stages": [
-        { "loops": 1 },
-        { "loops": 1 },
-        { "loops": 1 }
+        {
+          "loops": 1,
+          "cues": [
+            {
+              "time": 0.25,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 2.125,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 4.0,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 5.7,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 7.4,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 9.1,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 10.8,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 12.2,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 13.45,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 14.7,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 15.95,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 17.2,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            }
+          ]
+        },
+        {
+          "loops": 1,
+          "cues": [
+            {
+              "time": 0.625,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 1.875,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 3.125,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 4.375,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 5.625,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 6.875,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 8.125,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 9.325,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 10.325,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 11.325,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 12.325,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 13.155,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 13.985,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 14.815,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 15.645,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 16.645,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 17.945,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 19.195,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            }
+          ]
+        },
+        {
+          "loops": 1,
+          "cues": [
+            {
+              "time": 1.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 2.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 4.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 5.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 6.5,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 7.5,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 9.5,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 10.5,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 11.5,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 13.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 14.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 15.0,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 16.75,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 17.75,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            }
+          ]
+        }
       ]
     },
     {
       "id": "osf_seduce_custom05",
       "name": "Seduce Custom 05",
-      "tags": ["osf", "seduce", "paired", "custom"],
+      "tags": [
+        "osf",
+        "seduce",
+        "paired",
+        "custom"
+      ],
       "actors": [
         {
           "stages": [
-            { "file": "OSF/Seduce/Animations/custom05x01bot.glb" },
-            { "file": "OSF/Seduce/Animations/custom05x02bot.glb" },
-            { "file": "OSF/Seduce/Animations/custom05x03bot.glb" }
+            {
+              "file": "OSF/Seduce/Animations/custom05x01bot.glb"
+            },
+            {
+              "file": "OSF/Seduce/Animations/custom05x02bot.glb"
+            },
+            {
+              "file": "OSF/Seduce/Animations/custom05x03bot.glb"
+            }
           ]
         },
         {
           "stages": [
-            { "file": "OSF/Seduce/Animations/custom05x01top.glb" },
-            { "file": "OSF/Seduce/Animations/custom05x02top.glb" },
-            { "file": "OSF/Seduce/Animations/custom05x03top.glb" }
+            {
+              "file": "OSF/Seduce/Animations/custom05x01top.glb"
+            },
+            {
+              "file": "OSF/Seduce/Animations/custom05x02top.glb"
+            },
+            {
+              "file": "OSF/Seduce/Animations/custom05x03top.glb"
+            }
           ]
         }
       ],
       "stages": [
-        { "loops": 1 },
-        { "loops": 1 },
-        { "loops": 1 }
+        {
+          "loops": 1,
+          "cues": [
+            {
+              "time": 0.25,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 2.125,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 4.0,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 5.7,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 7.4,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 9.1,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 10.8,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 12.2,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 13.45,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 14.7,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 15.95,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 17.2,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            }
+          ]
+        },
+        {
+          "loops": 1,
+          "cues": [
+            {
+              "time": 0.625,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 1.875,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 3.125,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 4.375,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 5.625,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 6.875,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 8.125,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 9.325,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 10.325,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 11.325,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 12.325,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 13.155,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 13.985,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 14.815,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 15.645,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 16.645,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 17.945,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 19.195,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            }
+          ]
+        },
+        {
+          "loops": 1,
+          "cues": [
+            {
+              "time": 1.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 2.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 4.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 5.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 6.5,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 7.5,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 9.5,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 10.5,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 11.5,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 13.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 14.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 15.0,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 16.75,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 17.75,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            }
+          ]
+        }
       ]
     },
     {
       "id": "osf_seduce_custom06",
       "name": "Seduce Custom 06",
-      "tags": ["osf", "seduce", "paired", "custom"],
+      "tags": [
+        "osf",
+        "seduce",
+        "paired",
+        "custom"
+      ],
       "actors": [
         {
           "stages": [
-            { "file": "OSF/Seduce/Animations/custom06x01bot.glb" },
-            { "file": "OSF/Seduce/Animations/custom06x02bot.glb" },
-            { "file": "OSF/Seduce/Animations/custom06x03bot.glb" }
+            {
+              "file": "OSF/Seduce/Animations/custom06x01bot.glb"
+            },
+            {
+              "file": "OSF/Seduce/Animations/custom06x02bot.glb"
+            },
+            {
+              "file": "OSF/Seduce/Animations/custom06x03bot.glb"
+            }
           ]
         },
         {
           "stages": [
-            { "file": "OSF/Seduce/Animations/custom06x01top.glb" },
-            { "file": "OSF/Seduce/Animations/custom06x02top.glb" },
-            { "file": "OSF/Seduce/Animations/custom06x03top.glb" }
+            {
+              "file": "OSF/Seduce/Animations/custom06x01top.glb"
+            },
+            {
+              "file": "OSF/Seduce/Animations/custom06x02top.glb"
+            },
+            {
+              "file": "OSF/Seduce/Animations/custom06x03top.glb"
+            }
           ]
         }
       ],
       "stages": [
-        { "loops": 1 },
-        { "loops": 1 },
-        { "loops": 1 }
+        {
+          "loops": 1,
+          "cues": [
+            {
+              "time": 0.25,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 2.125,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 4.0,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 5.7,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 7.4,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 9.1,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 10.8,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 12.2,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 13.45,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 14.7,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 15.95,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 17.2,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            }
+          ]
+        },
+        {
+          "loops": 1,
+          "cues": [
+            {
+              "time": 0.625,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 1.875,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 3.125,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 4.375,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 5.625,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 6.875,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 8.125,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 9.325,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 10.325,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 11.325,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 12.325,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 13.155,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 13.985,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 14.815,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 15.645,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 16.645,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 17.945,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 19.195,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            }
+          ]
+        },
+        {
+          "loops": 1,
+          "cues": [
+            {
+              "time": 1.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 2.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 4.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 5.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 6.5,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 7.5,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 9.5,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 10.5,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 11.5,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 13.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 14.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 15.0,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 16.75,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 17.75,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            }
+          ]
+        }
       ]
     }
   ]
