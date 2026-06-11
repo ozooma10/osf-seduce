@@ -6,15 +6,15 @@ receives cue events for anything Papyrus-side (HUD, affinity, quest hooks).
 Moan audio needs NO code here — pack cues carry the sounds.}
 
 Function RegisterEvents() global
-    SFW.RegisterSceneCallback("OSFSeduce", "OnOSFScene")
-    SFW.RegisterCueCallback("OSFSeduce", "OnOSFCue")
+    OSF.RegisterSceneCallback("OSFSeduce", "OnOSFScene")
+    OSF.RegisterCueCallback("OSFSeduce", "OnOSFCue")
 EndFunction
 
 Function Play(string asId, Actor akBottom, Actor akTop) global
     Actor[] actors = new Actor[2]
     actors[0] = akBottom
     actors[1] = akTop
-    bool ok = SFW.PlayDefined(asId, actors, 0)
+    bool ok = OSF.PlayDefined(asId, actors, 0)
     Debug.Trace("OSFSeduce.Play: " + asId + " -> " + ok)
 EndFunction
 
@@ -43,22 +43,22 @@ Function Random(Actor akBottom, Actor akTop) global
     string[] tags = new string[2]
     tags[0] = "osf"
     tags[1] = "seduce"
-    string id = SFW.PlayByTags(actors, tags)
+    string id = OSF.PlayByTags(actors, tags)
     Debug.Trace("OSFSeduce.Random -> " + id)
 EndFunction
 
 Function Stage(Actor akActor, int aiStage) global
-    bool ok = SFW.SetSceneStage(akActor, aiStage)
+    bool ok = OSF.SetSceneStage(akActor, aiStage)
     Debug.Trace("OSFSeduce.Stage: " + aiStage + " -> " + ok)
 EndFunction
 
 Function Stop(Actor akActor) global
-    bool ok = SFW.StopScene(akActor)
+    bool ok = OSF.StopScene(akActor)
     Debug.Trace("OSFSeduce.Stop: " + ok)
 EndFunction
 
 Function Reload() global
-    int count = SFW.ReloadPacks()
+    int count = OSF.ReloadPacks()
     Debug.Notification("OSF Seduce: " + count + " animations registered")
 EndFunction
 
