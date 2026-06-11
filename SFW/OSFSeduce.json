@@ -358,6 +358,13 @@
               "event": "moan_loud",
               "actor": 0,
               "sound": "$moan_loud"
+            },
+            {
+              "time": 19.25,
+              "event": "orgasm",
+              "actor": 0,
+              "sound": "$moan_loud",
+              "lastLoop": true
             }
           ]
         }
@@ -677,6 +684,13 @@
               "event": "moan_loud",
               "actor": 0,
               "sound": "$moan_loud"
+            },
+            {
+              "time": 19.25,
+              "event": "orgasm",
+              "actor": 0,
+              "sound": "$moan_loud",
+              "lastLoop": true
             }
           ]
         }
@@ -996,6 +1010,13 @@
               "event": "moan_loud",
               "actor": 0,
               "sound": "$moan_loud"
+            },
+            {
+              "time": 19.25,
+              "event": "orgasm",
+              "actor": 0,
+              "sound": "$moan_loud",
+              "lastLoop": true
             }
           ]
         }
@@ -1315,6 +1336,13 @@
               "event": "moan_loud",
               "actor": 0,
               "sound": "$moan_loud"
+            },
+            {
+              "time": 19.25,
+              "event": "orgasm",
+              "actor": 0,
+              "sound": "$moan_loud",
+              "lastLoop": true
             }
           ]
         }
@@ -1634,6 +1662,13 @@
               "event": "moan_loud",
               "actor": 0,
               "sound": "$moan_loud"
+            },
+            {
+              "time": 19.25,
+              "event": "orgasm",
+              "actor": 0,
+              "sound": "$moan_loud",
+              "lastLoop": true
             }
           ]
         }
@@ -1953,6 +1988,13 @@
               "event": "moan_loud",
               "actor": 0,
               "sound": "$moan_loud"
+            },
+            {
+              "time": 19.25,
+              "event": "orgasm",
+              "actor": 0,
+              "sound": "$moan_loud",
+              "lastLoop": true
             }
           ]
         }
@@ -2272,6 +2314,13 @@
               "event": "moan_loud",
               "actor": 0,
               "sound": "$moan_loud"
+            },
+            {
+              "time": 19.25,
+              "event": "orgasm",
+              "actor": 0,
+              "sound": "$moan_loud",
+              "lastLoop": true
             }
           ]
         }
@@ -2591,6 +2640,13 @@
               "event": "moan_loud",
               "actor": 0,
               "sound": "$moan_loud"
+            },
+            {
+              "time": 19.25,
+              "event": "orgasm",
+              "actor": 0,
+              "sound": "$moan_loud",
+              "lastLoop": true
             }
           ]
         }
@@ -2910,6 +2966,13 @@
               "event": "moan_loud",
               "actor": 0,
               "sound": "$moan_loud"
+            },
+            {
+              "time": 19.25,
+              "event": "orgasm",
+              "actor": 0,
+              "sound": "$moan_loud",
+              "lastLoop": true
             }
           ]
         }
