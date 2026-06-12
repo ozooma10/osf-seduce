@@ -89,6 +89,14 @@ Function Random(Actor akBottom, Actor akTop) global
     Debug.Trace("OSFSeduce.Random -> " + id)
 EndFunction
 
+Function RandomPlayerTop(Actor akNPC) global
+    Random(akNPC, Game.GetPlayer())
+EndFunction
+
+Function RandomPlayerBottom(Actor akNPC) global
+    Random(Game.GetPlayer(), akNPC)
+EndFunction
+
 Function Stage(Actor akActor, int aiStage) global
     bool ok = OSF.SetSceneStage(akActor, aiStage)
     Debug.Trace("OSFSeduce.Stage: " + aiStage + " -> " + ok)

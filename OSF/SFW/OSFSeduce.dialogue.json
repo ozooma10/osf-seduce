@@ -10,218 +10,59 @@
     "text": "I can't stop thinking about you.",
     "response": "Yes, I would like that."
   },
-  "roleChoices": [
-    {
-      "id": "player_top",
-      "text": "[Player on top] I want to feel your body against mine.",
-      "response": "Yes, please."
-    },
-    {
-      "id": "player_bottom",
-      "text": "[Player on bottom] I need you. I want you inside of me.",
-      "response": "Yes! Take me like that."
-    }
-  ],
+  "randomSceneDialogue": {
+    "tags": ["osf", "seduce"],
+    "roles": [
+      {
+        "id": "player_top",
+        "text": "[Player on top] I want to feel your body against mine.",
+        "response": "Yes, please.",
+        "papyrus": "OSFSeduce.RandomPlayerTop"
+      },
+      {
+        "id": "player_bottom",
+        "text": "[Player on bottom] I need you. I want you inside of me.",
+        "response": "Yes! Take me like that.",
+        "papyrus": "OSFSeduce.RandomPlayerBottom"
+      }
+    ]
+  },
   "fragmentOverrides": [
     {
       "fragment": "Fragments:TopicInfos:TIF_SeduceMainQuest_0100101B",
       "sourceForm": "0100101B",
       "papyrus": "Actor.OpenInventory",
       "role": "inventory"
-    }
-  ],
-  "positionChoices": [
+    },
     {
-      "id": "bridge_player_top",
       "role": "player_top",
-      "playerSlot": 1,
-      "animation": "osf_seduce_bridge",
-      "text": "[Bridge] Lay on your back. I'll hold you up against me.",
-      "papyrus": "OSFSeduce.BridgePlayerTop",
-      "fragment": "Fragments:TopicInfos:TIF_SeduceMainQuest_0100083B",
-      "sourceForm": "0100083B"
+      "papyrus": "OSFSeduce.RandomPlayerTop",
+      "fragments": [
+        "Fragments:TopicInfos:TIF_SeduceMainQuest_0100083B",
+        "Fragments:TopicInfos:TIF_SeduceMainQuest_01001005",
+        "Fragments:TopicInfos:TIF_SeduceMainQuest_0100100A",
+        "Fragments:TopicInfos:TIF_SeduceMainQuest_01001031",
+        "Fragments:TopicInfos:TIF_SeduceMainQuest_01001035",
+        "Fragments:TopicInfos:TIF_SeduceMainQuest_01001136",
+        "Fragments:TopicInfos:TIF_SeduceMainQuest_0100113A",
+        "Fragments:TopicInfos:TIF_SeduceMainQuest_0100113E",
+        "Fragments:TopicInfos:TIF_SeduceMainQuest_01001143"
+      ]
     },
     {
-      "id": "eagle_player_top",
-      "role": "player_top",
-      "playerSlot": 1,
-      "animation": "osf_seduce_eagle",
-      "text": "[Eagle] Lay on your back and put your legs against my chest.",
-      "papyrus": "OSFSeduce.EaglePlayerTop",
-      "fragment": "Fragments:TopicInfos:TIF_SeduceMainQuest_01001005",
-      "sourceForm": "01001005"
-    },
-    {
-      "id": "downdog_player_top",
-      "role": "player_top",
-      "playerSlot": 1,
-      "animation": "osf_seduce_downdog",
-      "text": "[Down Dog] Get down on your hands and knees.",
-      "papyrus": "OSFSeduce.DownDogPlayerTop",
-      "fragment": "Fragments:TopicInfos:TIF_SeduceMainQuest_0100100A",
-      "sourceForm": "0100100A"
-    },
-    {
-      "id": "custom01_player_top",
-      "role": "player_top",
-      "playerSlot": 1,
-      "animation": "osf_seduce_custom01",
-      "text": "[Custom 1] Let me show you something special that I learned on Neon.",
-      "papyrus": "OSFSeduce.CustomPlayerTop",
-      "argument": 1,
-      "fragment": "Fragments:TopicInfos:TIF_SeduceMainQuest_01001031",
-      "sourceForm": "01001031"
-    },
-    {
-      "id": "custom02_player_top",
-      "role": "player_top",
-      "playerSlot": 1,
-      "animation": "osf_seduce_custom02",
-      "text": "[Custom 2] I want to show you something they teach us in Constellation",
-      "papyrus": "OSFSeduce.CustomPlayerTop",
-      "argument": 2,
-      "fragment": "Fragments:TopicInfos:TIF_SeduceMainQuest_01001035",
-      "sourceForm": "01001035"
-    },
-    {
-      "id": "custom03_player_top",
-      "role": "player_top",
-      "playerSlot": 1,
-      "animation": "osf_seduce_custom03",
-      "text": "[Custom 3] How about the position they teach at that workshop on Paradiso?",
-      "papyrus": "OSFSeduce.CustomPlayerTop",
-      "argument": 3,
-      "fragment": "Fragments:TopicInfos:TIF_SeduceMainQuest_01001136",
-      "sourceForm": "01001136"
-    },
-    {
-      "id": "custom04_player_top",
-      "role": "player_top",
-      "playerSlot": 1,
-      "animation": "osf_seduce_custom04",
-      "text": "[Custom 4] Let me show you what I learned from one of those forbidden Va'ruun books.",
-      "papyrus": "OSFSeduce.CustomPlayerTop",
-      "argument": 4,
-      "fragment": "Fragments:TopicInfos:TIF_SeduceMainQuest_0100113A",
-      "sourceForm": "0100113A"
-    },
-    {
-      "id": "custom05_player_top",
-      "role": "player_top",
-      "playerSlot": 1,
-      "animation": "osf_seduce_custom05",
-      "text": "[Custom 5] I heard the Crimson fleet do it this way to celebrate after a raid.",
-      "papyrus": "OSFSeduce.CustomPlayerTop",
-      "argument": 5,
-      "fragment": "Fragments:TopicInfos:TIF_SeduceMainQuest_0100113E",
-      "sourceForm": "0100113E"
-    },
-    {
-      "id": "custom06_player_top",
-      "role": "player_top",
-      "playerSlot": 1,
-      "animation": "osf_seduce_custom06",
-      "text": "[Custom 6] There's a secret room at The Clinic where they have a special procedure.",
-      "papyrus": "OSFSeduce.CustomPlayerTop",
-      "argument": 6,
-      "fragment": "Fragments:TopicInfos:TIF_SeduceMainQuest_01001143",
-      "sourceForm": "01001143"
-    },
-    {
-      "id": "bridge_player_bottom",
       "role": "player_bottom",
-      "playerSlot": 0,
-      "animation": "osf_seduce_bridge",
-      "text": "[Bridge] I'm going to lay on my back. Hold me.",
-      "papyrus": "OSFSeduce.BridgePlayerBottom",
-      "fragment": "Fragments:TopicInfos:TIF_SeduceMainQuest_01000840",
-      "sourceForm": "01000840"
-    },
-    {
-      "id": "eagle_player_bottom",
-      "role": "player_bottom",
-      "playerSlot": 0,
-      "animation": "osf_seduce_eagle",
-      "text": "[Eagle] I want you deep inside while I put my legs against you.",
-      "papyrus": "OSFSeduce.EaglePlayerBottom",
-      "fragment": "Fragments:TopicInfos:TIF_SeduceMainQuest_0100100E",
-      "sourceForm": "0100100E"
-    },
-    {
-      "id": "downdog_player_bottom",
-      "role": "player_bottom",
-      "playerSlot": 0,
-      "animation": "osf_seduce_downdog",
-      "text": "[Down Dog] I want you to take me from behind, on the ground.",
-      "papyrus": "OSFSeduce.DownDogPlayerBottom",
-      "fragment": "Fragments:TopicInfos:TIF_SeduceMainQuest_01001013",
-      "sourceForm": "01001013"
-    },
-    {
-      "id": "custom01_player_bottom",
-      "role": "player_bottom",
-      "playerSlot": 0,
-      "animation": "osf_seduce_custom01",
-      "text": "[Custom 1] I want to show you something I learned in Neon",
-      "papyrus": "OSFSeduce.CustomPlayerBottom",
-      "argument": 1,
-      "fragment": "Fragments:TopicInfos:TIF_SeduceMainQuest_01001029",
-      "sourceForm": "01001029"
-    },
-    {
-      "id": "custom02_player_bottom",
-      "role": "player_bottom",
-      "playerSlot": 0,
-      "animation": "osf_seduce_custom02",
-      "text": "[Custom 2] Let me show you what I did to get myself in to Constellation",
-      "papyrus": "OSFSeduce.CustomPlayerBottom",
-      "argument": 2,
-      "fragment": "Fragments:TopicInfos:TIF_SeduceMainQuest_0100102D",
-      "sourceForm": "0100102D"
-    },
-    {
-      "id": "custom03_player_bottom",
-      "role": "player_bottom",
-      "playerSlot": 0,
-      "animation": "osf_seduce_custom03",
-      "text": "[Custom 3] Can you do that thing from Paradiso?",
-      "papyrus": "OSFSeduce.CustomPlayerBottom",
-      "argument": 3,
-      "fragment": "Fragments:TopicInfos:TIF_SeduceMainQuest_01001147",
-      "sourceForm": "01001147"
-    },
-    {
-      "id": "custom04_player_bottom",
-      "role": "player_bottom",
-      "playerSlot": 0,
-      "animation": "osf_seduce_custom04",
-      "text": "[Custom 4] Take me, like one of those Serpent-worshipping whores.",
-      "papyrus": "OSFSeduce.CustomPlayerBottom",
-      "argument": 4,
-      "fragment": "Fragments:TopicInfos:TIF_SeduceMainQuest_0100114B",
-      "sourceForm": "0100114B"
-    },
-    {
-      "id": "custom05_player_bottom",
-      "role": "player_bottom",
-      "playerSlot": 0,
-      "animation": "osf_seduce_custom05",
-      "text": "[Custom 5] Be rough with me. Like a pirate captain.",
-      "papyrus": "OSFSeduce.CustomPlayerBottom",
-      "argument": 5,
-      "fragment": "Fragments:TopicInfos:TIF_SeduceMainQuest_0100114F",
-      "sourceForm": "0100114F"
-    },
-    {
-      "id": "custom06_player_bottom",
-      "role": "player_bottom",
-      "playerSlot": 0,
-      "animation": "osf_seduce_custom06",
-      "text": "[Custom 6] This time at The Clinic, they did something to me...",
-      "papyrus": "OSFSeduce.CustomPlayerBottom",
-      "argument": 6,
-      "fragment": "Fragments:TopicInfos:TIF_SeduceMainQuest_01001153",
-      "sourceForm": "01001153"
+      "papyrus": "OSFSeduce.RandomPlayerBottom",
+      "fragments": [
+        "Fragments:TopicInfos:TIF_SeduceMainQuest_01000840",
+        "Fragments:TopicInfos:TIF_SeduceMainQuest_0100100E",
+        "Fragments:TopicInfos:TIF_SeduceMainQuest_01001013",
+        "Fragments:TopicInfos:TIF_SeduceMainQuest_01001029",
+        "Fragments:TopicInfos:TIF_SeduceMainQuest_0100102D",
+        "Fragments:TopicInfos:TIF_SeduceMainQuest_01001147",
+        "Fragments:TopicInfos:TIF_SeduceMainQuest_0100114B",
+        "Fragments:TopicInfos:TIF_SeduceMainQuest_0100114F",
+        "Fragments:TopicInfos:TIF_SeduceMainQuest_01001153"
+      ]
     }
   ]
 }
