@@ -57,26 +57,26 @@
         {
           "stages": [
             {
-              "file": "OSF/Seduce/Animations/bridge01bot.glb"
+              "file": "NAF/bridge01bot.glb"
             },
             {
-              "file": "OSF/Seduce/Animations/bridge02bot.glb"
+              "file": "NAF/bridge02bot.glb"
             },
             {
-              "file": "OSF/Seduce/Animations/bridge03bot.glb"
+              "file": "NAF/bridge03bot.glb"
             }
           ]
         },
         {
           "stages": [
             {
-              "file": "OSF/Seduce/Animations/bridge01top.glb"
+              "file": "NAF/bridge01top.glb"
             },
             {
-              "file": "OSF/Seduce/Animations/bridge02top.glb"
+              "file": "NAF/bridge02top.glb"
             },
             {
-              "file": "OSF/Seduce/Animations/bridge03top.glb"
+              "file": "NAF/bridge03top.glb"
             }
           ]
         }
@@ -383,26 +383,26 @@
         {
           "stages": [
             {
-              "file": "OSF/Seduce/Animations/downdog01bot.glb"
+              "file": "NAF/downdog01bot.glb"
             },
             {
-              "file": "OSF/Seduce/Animations/downdog02bot.glb"
+              "file": "NAF/downdog02bot.glb"
             },
             {
-              "file": "OSF/Seduce/Animations/downdog03bot.glb"
+              "file": "NAF/downdog03bot.glb"
             }
           ]
         },
         {
           "stages": [
             {
-              "file": "OSF/Seduce/Animations/downdog01top.glb"
+              "file": "NAF/downdog01top.glb"
             },
             {
-              "file": "OSF/Seduce/Animations/downdog02top.glb"
+              "file": "NAF/downdog02top.glb"
             },
             {
-              "file": "OSF/Seduce/Animations/downdog03top.glb"
+              "file": "NAF/downdog03top.glb"
             }
           ]
         }
@@ -709,26 +709,26 @@
         {
           "stages": [
             {
-              "file": "OSF/Seduce/Animations/eagle01bot.glb"
+              "file": "NAF/eagle01bot.glb"
             },
             {
-              "file": "OSF/Seduce/Animations/eagle02bot.glb"
+              "file": "NAF/eagle02bot.glb"
             },
             {
-              "file": "OSF/Seduce/Animations/eagle03bot.glb"
+              "file": "NAF/eagle03bot.glb"
             }
           ]
         },
         {
           "stages": [
             {
-              "file": "OSF/Seduce/Animations/eagle01top.glb"
+              "file": "NAF/eagle01top.glb"
             },
             {
-              "file": "OSF/Seduce/Animations/eagle02top.glb"
+              "file": "NAF/eagle02top.glb"
             },
             {
-              "file": "OSF/Seduce/Animations/eagle03top.glb"
+              "file": "NAF/eagle03top.glb"
             }
           ]
         }
@@ -1035,26 +1035,26 @@
         {
           "stages": [
             {
-              "file": "OSF/Seduce/Animations/custom01x01bot.glb"
+              "file": "NAF/custom01x01bot.glb"
             },
             {
-              "file": "OSF/Seduce/Animations/custom01x02bot.glb"
+              "file": "NAF/custom01x02bot.glb"
             },
             {
-              "file": "OSF/Seduce/Animations/custom01x03bot.glb"
+              "file": "NAF/custom01x03bot.glb"
             }
           ]
         },
         {
           "stages": [
             {
-              "file": "OSF/Seduce/Animations/custom01x01top.glb"
+              "file": "NAF/custom01x01top.glb"
             },
             {
-              "file": "OSF/Seduce/Animations/custom01x02top.glb"
+              "file": "NAF/custom01x02top.glb"
             },
             {
-              "file": "OSF/Seduce/Animations/custom01x03top.glb"
+              "file": "NAF/custom01x03top.glb"
             }
           ]
         }
@@ -1361,26 +1361,26 @@
         {
           "stages": [
             {
-              "file": "OSF/Seduce/Animations/custom02x01bot.glb"
+              "file": "NAF/custom02x01bot.glb"
             },
             {
-              "file": "OSF/Seduce/Animations/custom02x02bot.glb"
+              "file": "NAF/custom02x02bot.glb"
             },
             {
-              "file": "OSF/Seduce/Animations/custom02x03bot.glb"
+              "file": "NAF/custom02x03bot.glb"
             }
           ]
         },
         {
           "stages": [
             {
-              "file": "OSF/Seduce/Animations/custom02x01top.glb"
+              "file": "NAF/custom02x01top.glb"
             },
             {
-              "file": "OSF/Seduce/Animations/custom02x02top.glb"
+              "file": "NAF/custom02x02top.glb"
             },
             {
-              "file": "OSF/Seduce/Animations/custom02x03top.glb"
+              "file": "NAF/custom02x03top.glb"
             }
           ]
         }
@@ -1687,26 +1687,26 @@
         {
           "stages": [
             {
-              "file": "OSF/Seduce/Animations/custom03x01bot.glb"
+              "file": "NAF/custom03x01bot.glb"
             },
             {
-              "file": "OSF/Seduce/Animations/custom03x02bot.glb"
+              "file": "NAF/custom03x02bot.glb"
             },
             {
-              "file": "OSF/Seduce/Animations/custom03x03bot.glb"
+              "file": "NAF/custom03x03bot.glb"
             }
           ]
         },
         {
           "stages": [
             {
-              "file": "OSF/Seduce/Animations/custom03x01top.glb"
+              "file": "NAF/custom03x01top.glb"
             },
             {
-              "file": "OSF/Seduce/Animations/custom03x02top.glb"
+              "file": "NAF/custom03x02top.glb"
             },
             {
-              "file": "OSF/Seduce/Animations/custom03x03top.glb"
+              "file": "NAF/custom03x03top.glb"
             }
           ]
         }
@@ -2013,26 +2013,26 @@
         {
           "stages": [
             {
-              "file": "OSF/Seduce/Animations/custom04x01bot.glb"
+              "file": "NAF/custom04x01bot.glb"
             },
             {
-              "file": "OSF/Seduce/Animations/custom04x02bot.glb"
+              "file": "NAF/custom04x02bot.glb"
             },
             {
-              "file": "OSF/Seduce/Animations/custom04x03bot.glb"
+              "file": "NAF/custom04x03bot.glb"
             }
           ]
         },
         {
           "stages": [
             {
-              "file": "OSF/Seduce/Animations/custom04x01top.glb"
+              "file": "NAF/custom04x01top.glb"
             },
             {
-              "file": "OSF/Seduce/Animations/custom04x02top.glb"
+              "file": "NAF/custom04x02top.glb"
             },
             {
-              "file": "OSF/Seduce/Animations/custom04x03top.glb"
+              "file": "NAF/custom04x03top.glb"
             }
           ]
         }
@@ -2339,26 +2339,26 @@
         {
           "stages": [
             {
-              "file": "OSF/Seduce/Animations/custom05x01bot.glb"
+              "file": "NAF/custom05x01bot.glb"
             },
             {
-              "file": "OSF/Seduce/Animations/custom05x02bot.glb"
+              "file": "NAF/custom05x02bot.glb"
             },
             {
-              "file": "OSF/Seduce/Animations/custom05x03bot.glb"
+              "file": "NAF/custom05x03bot.glb"
             }
           ]
         },
         {
           "stages": [
             {
-              "file": "OSF/Seduce/Animations/custom05x01top.glb"
+              "file": "NAF/custom05x01top.glb"
             },
             {
-              "file": "OSF/Seduce/Animations/custom05x02top.glb"
+              "file": "NAF/custom05x02top.glb"
             },
             {
-              "file": "OSF/Seduce/Animations/custom05x03top.glb"
+              "file": "NAF/custom05x03top.glb"
             }
           ]
         }
@@ -2665,26 +2665,26 @@
         {
           "stages": [
             {
-              "file": "OSF/Seduce/Animations/custom06x01bot.glb"
+              "file": "NAF/custom06x01bot.glb"
             },
             {
-              "file": "OSF/Seduce/Animations/custom06x02bot.glb"
+              "file": "NAF/custom06x02bot.glb"
             },
             {
-              "file": "OSF/Seduce/Animations/custom06x03bot.glb"
+              "file": "NAF/custom06x03bot.glb"
             }
           ]
         },
         {
           "stages": [
             {
-              "file": "OSF/Seduce/Animations/custom06x01top.glb"
+              "file": "NAF/custom06x01top.glb"
             },
             {
-              "file": "OSF/Seduce/Animations/custom06x02top.glb"
+              "file": "NAF/custom06x02top.glb"
             },
             {
-              "file": "OSF/Seduce/Animations/custom06x03top.glb"
+              "file": "NAF/custom06x03top.glb"
             }
           ]
         }
@@ -2973,6 +2973,598 @@
               "actor": 0,
               "sound": "$moan_loud",
               "lastLoop": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "osf_seduce_boundhogtie",
+      "name": "Seduce Bound Hogtie",
+      "tags": [
+        "osf",
+        "seduce",
+        "solo",
+        "boundhogtie"
+      ],
+      "actors": [
+        {
+          "stages": [
+            {
+              "file": "NAF/boundhogtie01.glb"
+            },
+            {
+              "file": "NAF/boundhogtie02.glb"
+            },
+            {
+              "file": "NAF/boundhogtie03.glb"
+            }
+          ]
+        }
+      ],
+      "stages": [
+        {
+          "loops": 1,
+          "cues": [
+            {
+              "time": 0.25,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 4.0,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 8.0,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 12.0,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            }
+          ]
+        },
+        {
+          "loops": 1,
+          "cues": [
+            {
+              "time": 0.5,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 4.0,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 8.0,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 12.0,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            }
+          ]
+        },
+        {
+          "loops": 1,
+          "cues": [
+            {
+              "time": 1.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 4.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 8.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 12.0,
+              "event": "orgasm",
+              "actor": 0,
+              "sound": "$moan_loud",
+              "lastLoop": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "osf_seduce_chokepoleopen",
+      "name": "Seduce Choke Pole Open",
+      "tags": [
+        "osf",
+        "seduce",
+        "solo",
+        "chokepole"
+      ],
+      "actors": [
+        {
+          "stages": [
+            {
+              "file": "NAF/chokepoleopen01.glb"
+            },
+            {
+              "file": "NAF/chokepoleopen02.glb"
+            },
+            {
+              "file": "NAF/chokepoleopen03.glb"
+            }
+          ]
+        }
+      ],
+      "stages": [
+        {
+          "loops": 1,
+          "cues": [
+            {
+              "time": 0.25,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 4.0,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 8.0,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 12.0,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            }
+          ]
+        },
+        {
+          "loops": 1,
+          "cues": [
+            {
+              "time": 0.5,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 4.0,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 8.0,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 12.0,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            }
+          ]
+        },
+        {
+          "loops": 1,
+          "cues": [
+            {
+              "time": 1.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 4.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 8.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 12.0,
+              "event": "orgasm",
+              "actor": 0,
+              "sound": "$moan_loud",
+              "lastLoop": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "osf_seduce_standself",
+      "name": "Seduce Stand Self",
+      "tags": [
+        "osf",
+        "seduce",
+        "solo",
+        "standself"
+      ],
+      "actors": [
+        {
+          "stages": [
+            {
+              "file": "NAF/standself01.glb"
+            },
+            {
+              "file": "NAF/standself02.glb"
+            },
+            {
+              "file": "NAF/standself03.glb"
+            }
+          ]
+        }
+      ],
+      "stages": [
+        {
+          "loops": 1,
+          "cues": [
+            {
+              "time": 0.25,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 4.0,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 8.0,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 12.0,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            }
+          ]
+        },
+        {
+          "loops": 1,
+          "cues": [
+            {
+              "time": 0.5,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 4.0,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 8.0,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 12.0,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            }
+          ]
+        },
+        {
+          "loops": 1,
+          "cues": [
+            {
+              "time": 1.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 4.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 8.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 12.0,
+              "event": "orgasm",
+              "actor": 0,
+              "sound": "$moan_loud",
+              "lastLoop": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "osf_seduce_standsensor",
+      "name": "Seduce Stand Sensor",
+      "tags": [
+        "osf",
+        "seduce",
+        "solo",
+        "standsensor"
+      ],
+      "actors": [
+        {
+          "stages": [
+            {
+              "file": "NAF/standsensor01.glb"
+            },
+            {
+              "file": "NAF/standsensor02.glb"
+            },
+            {
+              "file": "NAF/standsensor03.glb"
+            }
+          ]
+        }
+      ],
+      "stages": [
+        {
+          "loops": 1,
+          "cues": [
+            {
+              "time": 0.25,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 4.0,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 8.0,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 12.0,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            }
+          ]
+        },
+        {
+          "loops": 1,
+          "cues": [
+            {
+              "time": 0.5,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 4.0,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 8.0,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            },
+            {
+              "time": 12.0,
+              "event": "moan_med",
+              "actor": 0,
+              "sound": "$moan_med"
+            }
+          ]
+        },
+        {
+          "loops": 1,
+          "cues": [
+            {
+              "time": 1.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 4.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 8.0,
+              "event": "moan_loud",
+              "actor": 0,
+              "sound": "$moan_loud"
+            },
+            {
+              "time": 12.0,
+              "event": "orgasm",
+              "actor": 0,
+              "sound": "$moan_loud",
+              "lastLoop": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "osf_seduce_facedownsurrender",
+      "name": "Seduce Face Down Surrender",
+      "tags": [
+        "osf",
+        "seduce",
+        "solo",
+        "surrender"
+      ],
+      "actors": [
+        {
+          "stages": [
+            {
+              "file": "NAF/facedownsurrender00.glb"
+            }
+          ]
+        }
+      ],
+      "stages": [
+        {
+          "loops": 1,
+          "cues": [
+            {
+              "time": 0.5,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 4.0,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 8.0,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "osf_seduce_standcover",
+      "name": "Seduce Stand Cover",
+      "tags": [
+        "osf",
+        "seduce",
+        "solo",
+        "standcover"
+      ],
+      "actors": [
+        {
+          "stages": [
+            {
+              "file": "NAF/StandCover01.glb"
+            }
+          ]
+        }
+      ],
+      "stages": [
+        {
+          "loops": 1,
+          "cues": [
+            {
+              "time": 0.5,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 4.0,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 8.0,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "osf_seduce_standsurrender",
+      "name": "Seduce Stand Surrender",
+      "tags": [
+        "osf",
+        "seduce",
+        "solo",
+        "surrender"
+      ],
+      "actors": [
+        {
+          "stages": [
+            {
+              "file": "NAF/StandSurrender01.glb"
+            }
+          ]
+        }
+      ],
+      "stages": [
+        {
+          "loops": 1,
+          "cues": [
+            {
+              "time": 0.5,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 4.0,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
+            },
+            {
+              "time": 8.0,
+              "event": "moan_short",
+              "actor": 0,
+              "sound": "$moan_short"
             }
           ]
         }
