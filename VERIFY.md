@@ -45,6 +45,17 @@ human at the keyboard. Check off / delete items as they're confirmed.
   (~2.3 min) matching SAF's shipped defaults; stages 2/3 repeat 3x and the
   climax fires on stage 3's final loop. Confirm the length feels right and
   the climax still lands.
+- [ ] **Erection sceneEquipment** (pack commit `dea2b38` + OSF Animation
+  plugin-qualified specs) — the 9 paired animations equip
+  "Robert S Body Replacer.esm|0x804" (male) / "Dick.esm|0x81D" (female)
+  on the TOP actor only. Verify with the body mod(s) installed: armor
+  equips at scene start, is removed (not just unequipped) at scene end,
+  and no copy lingers in the NPC's inventory. Without the body mods:
+  warn line in OSF log, scene plays normally. Also exercises the
+  framework's new add-if-missing equip + native remove paths
+  (raw-offset bindings, prologue-gated — check the log for
+  "add-if-missing disabled" / "remove disabled" warnings on game
+  updates).
 
 ## Audit backlog (not yet implemented)
 
@@ -53,7 +64,3 @@ human at the keyboard. Check off / delete items as they're confirmed.
 - [ ] xEdit pass on OSFSeduce.esp: dead terminal-menu records and
   `Chem_SeductionPheromone` inherited from NAFSeduce.esp (we ship no
   terminal fragment scripts).
-- [ ] `sceneEquipment` erection support — needs an answer on whether
-  PackRegistry resolves ARMO forms from external plugins
-  (Robert S Body Replacer.esm form 2052 / Dick.esm form 2077), or proxy
-  ARMOs in OSFSeduce.esp.
