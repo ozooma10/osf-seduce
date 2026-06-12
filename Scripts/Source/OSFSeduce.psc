@@ -160,25 +160,23 @@ EndFunction
 bool Function CfgChangeAffinity() global  ; warm the NPC partner on a finished scene
     return true
 EndFunction
-float Function CfgAffinityGain() global
-    return 5.0
+float Function CfgAffinityGain() global  ; SAF Seduce's shipped default
+    return 25.0
 EndFunction
-float Function CfgAngerDrop() global
+float Function CfgAngerDrop() global     ; SAF default unknown (its menu never resets it)
     return 5.0
 EndFunction
 
 ; Companion affinity / anger ActorValues. A global function can't hold a filled
-; Property, so these resolve the base-game forms by id. The ids are version-
-; sensitive game data — verify the COM_Affinity / COM_AngerLevel records in
-; xEdit for your build before enabling, or (preferred) override these from the
-; ESM quest. While they return None the affinity reward no-ops safely.
+; Property, so these resolve the base-game forms by id. FormIDs extracted from
+; NAFSeduce.esp's quest VMAD (the COM_Affinity / COM_AngerLevel bindings SAF
+; Seduce shipped with) — not yet re-verified in-game here. If a game patch ever
+; moves them, a None return makes the reward no-op safely.
 ActorValue Function AffinityAV() global
-    ; return Game.GetFormFromFile(0x000000, "Starfield.esm") as ActorValue
-    return None
+    return Game.GetFormFromFile(0x000A1B80, "Starfield.esm") as ActorValue
 EndFunction
 ActorValue Function AngerAV() global
-    ; return Game.GetFormFromFile(0x000000, "Starfield.esm") as ActorValue
-    return None
+    return Game.GetFormFromFile(0x0002DA12, "Starfield.esm") as ActorValue
 EndFunction
 
 Function OnOSFScene(string asEvent, Actor[] akActors, int aiStage) global
