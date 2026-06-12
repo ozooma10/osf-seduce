@@ -59,8 +59,10 @@ human at the keyboard. Check off / delete items as they're confirmed.
 
 ## Audit backlog (not yet implemented)
 
-- [ ] SAF-style fade-to-black around the scene start/end snap (needs the
-  imod forms reachable from the stateless script, or an ESM quest layer).
+- [ ] SAF-style fade-to-black around the scene start/end snap — being
+  implemented NATIVELY in the OSF Animation framework (scene lifecycle),
+  not here. Once it lands: verify fades cover the teleport/strip snap,
+  and nothing in this mod needs changes.
 - [ ] xEdit pass on OSFSeduce.esp: dead terminal-menu records and
   `Chem_SeductionPheromone` inherited from NAFSeduce.esp (we ship no
   terminal fragment scripts).
