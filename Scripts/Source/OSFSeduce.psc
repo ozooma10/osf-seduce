@@ -10,6 +10,21 @@ Function RegisterEvents() global
     OSF.RegisterCueCallback("OSFSeduce", "OnOSFCue")
 EndFunction
 
+; Pre-scene actor prep (SAF parity): drop any combat alarm and sheathe weapons
+; so actors don't enter the scene mid-alert or with a gun drawn. Director owns
+; the rest of the prep (undress, camera, input lock, positioning).
+Function PrepActors(Actor[] akActors) global
+    int i = 0
+    while i < akActors.Length
+        Actor a = akActors[i]
+        if a
+            a.StopCombatAlarm()
+            a.SheatheWeapon()
+        endif
+        i = i + 1
+    endwhile
+EndFunction
+
 ; --- explicit id play (escape hatch) -----------------------------------------
 ; Plays one specific animation by its pack id. This DOES couple the caller to a
 ; particular pack's ids; prefer the tag helpers below for pack-agnostic content.
@@ -17,6 +32,7 @@ Function Play(string asId, Actor akBottom, Actor akTop) global
     Actor[] actors = new Actor[2]
     actors[0] = akBottom
     actors[1] = akTop
+    PrepActors(actors)
     bool ok = OSF.PlayDefined(asId, actors, 0)
     Debug.Trace("OSFSeduce.Play: " + asId + " -> " + ok)
 EndFunction
@@ -37,6 +53,7 @@ Function PlayTag(string asSubTag, Actor akBottom, Actor akTop) global
     Actor[] actors = new Actor[2]
     actors[0] = akBottom
     actors[1] = akTop
+    PrepActors(actors)
     string[] tags = new string[3]
     tags[0] = "osf"
     tags[1] = "seduce"
@@ -110,6 +127,7 @@ Function Random(Actor akBottom, Actor akTop) global
     Actor[] actors = new Actor[2]
     actors[0] = akBottom
     actors[1] = akTop
+    PrepActors(actors)
     string[] tags = new string[2]
     tags[0] = "osf"
     tags[1] = "seduce"

@@ -37,13 +37,19 @@ human at the keyboard. Check off / delete items as they're confirmed.
 - [ ] **Tag-based pose helpers** — `cgf "OSFSeduce.Bridge" <a> <b>` etc. now
   select via PlayByTags(osf/seduce/<pose>) instead of ids; spot-check one
   named pose and one `Custom <n>`.
+- [ ] **Combat-stop + sheathe prep** — PrepActors (StopCombatAlarm +
+  SheatheWeapon, all entry paths) runs before every scene. Test: draw a
+  weapon, start a scene — it should holster first; ideally also test with
+  an alarmed actor.
+- [ ] **Stage loops 1/3/3** (pack) — scenes now run ~7 clip loops total
+  (~2.3 min) matching SAF's shipped defaults; stages 2/3 repeat 3x and the
+  climax fires on stage 3's final loop. Confirm the length feels right and
+  the climax still lands.
 
 ## Audit backlog (not yet implemented)
 
-- [ ] Combat-stop + sheathe before scene start; SAF-style fade-to-black
-  around the start/end snap (audit item 4/5).
-- [ ] Bump pack stage loops to SAF's shipped feel (1/3/3) if scenes feel
-  short at 1/1/1.
+- [ ] SAF-style fade-to-black around the scene start/end snap (needs the
+  imod forms reachable from the stateless script, or an ESM quest layer).
 - [ ] xEdit pass on OSFSeduce.esp: dead terminal-menu records and
   `Chem_SeductionPheromone` inherited from NAFSeduce.esp (we ship no
   terminal fragment scripts).
