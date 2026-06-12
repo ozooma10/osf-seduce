@@ -72,8 +72,7 @@ if (!$NoDeploy) {
         "OSFSeduce.esp",
         "meta.ini",
         "OSF",
-        "Scripts",
-        "Sound"
+        "Scripts"
     ) | ForEach-Object {
         Copy-ModItem $_
     }
