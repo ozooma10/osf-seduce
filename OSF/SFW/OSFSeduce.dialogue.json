@@ -1,0 +1,183 @@
+{
+  "name": "OSF Seduce Dialogue",
+  "source": {
+    "mod": "SAF_Seduce_",
+    "plugin": "NAFSeduce.esp",
+    "quest": "SeduceMainQuest"
+  },
+  "entry": {
+    "id": "seduce_greet",
+    "text": "I can't stop thinking about you.",
+    "response": "Yes, I would like that."
+  },
+  "roleChoices": [
+    {
+      "id": "player_top",
+      "text": "[Player on top] I want to feel your body against mine.",
+      "response": "Yes, please."
+    },
+    {
+      "id": "player_bottom",
+      "text": "[Player on bottom] I need you. I want you inside of me.",
+      "response": "Yes! Take me like that."
+    }
+  ],
+  "positionChoices": [
+    {
+      "id": "bridge_player_top",
+      "role": "player_top",
+      "playerSlot": 1,
+      "animation": "osf_seduce_bridge",
+      "text": "[Bridge] Lay on your back. I'll hold you up against me.",
+      "papyrus": "OSFSeduce.BridgePlayerTop"
+    },
+    {
+      "id": "eagle_player_top",
+      "role": "player_top",
+      "playerSlot": 1,
+      "animation": "osf_seduce_eagle",
+      "text": "[Eagle] Lay on your back and put your legs against my chest.",
+      "papyrus": "OSFSeduce.EaglePlayerTop"
+    },
+    {
+      "id": "downdog_player_top",
+      "role": "player_top",
+      "playerSlot": 1,
+      "animation": "osf_seduce_downdog",
+      "text": "[Down Dog] Get down on your hands and knees.",
+      "papyrus": "OSFSeduce.DownDogPlayerTop"
+    },
+    {
+      "id": "custom01_player_top",
+      "role": "player_top",
+      "playerSlot": 1,
+      "animation": "osf_seduce_custom01",
+      "text": "[Custom 1] Let me show you something special that I learned on Neon.",
+      "papyrus": "OSFSeduce.CustomPlayerTop",
+      "argument": 1
+    },
+    {
+      "id": "custom02_player_top",
+      "role": "player_top",
+      "playerSlot": 1,
+      "animation": "osf_seduce_custom02",
+      "text": "[Custom 2] I want to show you something they teach us in Constellation",
+      "papyrus": "OSFSeduce.CustomPlayerTop",
+      "argument": 2
+    },
+    {
+      "id": "custom03_player_top",
+      "role": "player_top",
+      "playerSlot": 1,
+      "animation": "osf_seduce_custom03",
+      "text": "[Custom 3] How about the position they teach at that workshop on Paradiso?",
+      "papyrus": "OSFSeduce.CustomPlayerTop",
+      "argument": 3
+    },
+    {
+      "id": "custom04_player_top",
+      "role": "player_top",
+      "playerSlot": 1,
+      "animation": "osf_seduce_custom04",
+      "text": "[Custom 4] Let me show you what I learned from one of those forbidden Va'ruun books.",
+      "papyrus": "OSFSeduce.CustomPlayerTop",
+      "argument": 4
+    },
+    {
+      "id": "custom05_player_top",
+      "role": "player_top",
+      "playerSlot": 1,
+      "animation": "osf_seduce_custom05",
+      "text": "[Custom 5] I heard the Crimson fleet do it this way to celebrate after a raid.",
+      "papyrus": "OSFSeduce.CustomPlayerTop",
+      "argument": 5
+    },
+    {
+      "id": "custom06_player_top",
+      "role": "player_top",
+      "playerSlot": 1,
+      "animation": "osf_seduce_custom06",
+      "text": "[Custom 6] There's a secret room at The Clinic where they have a special procedure.",
+      "papyrus": "OSFSeduce.CustomPlayerTop",
+      "argument": 6
+    },
+    {
+      "id": "bridge_player_bottom",
+      "role": "player_bottom",
+      "playerSlot": 0,
+      "animation": "osf_seduce_bridge",
+      "text": "[Bridge] I'm going to lay on my back. Hold me.",
+      "papyrus": "OSFSeduce.BridgePlayerBottom"
+    },
+    {
+      "id": "eagle_player_bottom",
+      "role": "player_bottom",
+      "playerSlot": 0,
+      "animation": "osf_seduce_eagle",
+      "text": "[Eagle] I want you deep inside while I put my legs against you.",
+      "papyrus": "OSFSeduce.EaglePlayerBottom"
+    },
+    {
+      "id": "downdog_player_bottom",
+      "role": "player_bottom",
+      "playerSlot": 0,
+      "animation": "osf_seduce_downdog",
+      "text": "[Down Dog] I want you to take me from behind, on the ground.",
+      "papyrus": "OSFSeduce.DownDogPlayerBottom"
+    },
+    {
+      "id": "custom01_player_bottom",
+      "role": "player_bottom",
+      "playerSlot": 0,
+      "animation": "osf_seduce_custom01",
+      "text": "[Custom 1] I want to show you something I learned in Neon",
+      "papyrus": "OSFSeduce.CustomPlayerBottom",
+      "argument": 1
+    },
+    {
+      "id": "custom02_player_bottom",
+      "role": "player_bottom",
+      "playerSlot": 0,
+      "animation": "osf_seduce_custom02",
+      "text": "[Custom 2] Let me show you what I did to get myself in to Constellation",
+      "papyrus": "OSFSeduce.CustomPlayerBottom",
+      "argument": 2
+    },
+    {
+      "id": "custom03_player_bottom",
+      "role": "player_bottom",
+      "playerSlot": 0,
+      "animation": "osf_seduce_custom03",
+      "text": "[Custom 3] Can you do that thing from Paradiso?",
+      "papyrus": "OSFSeduce.CustomPlayerBottom",
+      "argument": 3
+    },
+    {
+      "id": "custom04_player_bottom",
+      "role": "player_bottom",
+      "playerSlot": 0,
+      "animation": "osf_seduce_custom04",
+      "text": "[Custom 4] Take me, like one of those Serpent-worshipping whores.",
+      "papyrus": "OSFSeduce.CustomPlayerBottom",
+      "argument": 4
+    },
+    {
+      "id": "custom05_player_bottom",
+      "role": "player_bottom",
+      "playerSlot": 0,
+      "animation": "osf_seduce_custom05",
+      "text": "[Custom 5] Be rough with me. Like a pirate captain.",
+      "papyrus": "OSFSeduce.CustomPlayerBottom",
+      "argument": 5
+    },
+    {
+      "id": "custom06_player_bottom",
+      "role": "player_bottom",
+      "playerSlot": 0,
+      "animation": "osf_seduce_custom06",
+      "text": "[Custom 6] This time at The Clinic, they did something to me...",
+      "papyrus": "OSFSeduce.CustomPlayerBottom",
+      "argument": 6
+    }
+  ]
+}

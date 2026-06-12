@@ -18,21 +18,63 @@ Function Play(string asId, Actor akBottom, Actor akTop) global
     Debug.Trace("OSFSeduce.Play: " + asId + " -> " + ok)
 EndFunction
 
+Function PlayPlayerTop(string asId, Actor akNPC) global
+    Play(asId, akNPC, Game.GetPlayer())
+EndFunction
+
+Function PlayPlayerBottom(string asId, Actor akNPC) global
+    Play(asId, Game.GetPlayer(), akNPC)
+EndFunction
+
 Function Bridge(Actor akBottom, Actor akTop) global
     Play("osf_seduce_bridge", akBottom, akTop)
+EndFunction
+
+Function BridgePlayerTop(Actor akNPC) global
+    PlayPlayerTop("osf_seduce_bridge", akNPC)
+EndFunction
+
+Function BridgePlayerBottom(Actor akNPC) global
+    PlayPlayerBottom("osf_seduce_bridge", akNPC)
 EndFunction
 
 Function DownDog(Actor akBottom, Actor akTop) global
     Play("osf_seduce_downdog", akBottom, akTop)
 EndFunction
 
+Function DownDogPlayerTop(Actor akNPC) global
+    PlayPlayerTop("osf_seduce_downdog", akNPC)
+EndFunction
+
+Function DownDogPlayerBottom(Actor akNPC) global
+    PlayPlayerBottom("osf_seduce_downdog", akNPC)
+EndFunction
+
 Function Eagle(Actor akBottom, Actor akTop) global
     Play("osf_seduce_eagle", akBottom, akTop)
+EndFunction
+
+Function EaglePlayerTop(Actor akNPC) global
+    PlayPlayerTop("osf_seduce_eagle", akNPC)
+EndFunction
+
+Function EaglePlayerBottom(Actor akNPC) global
+    PlayPlayerBottom("osf_seduce_eagle", akNPC)
 EndFunction
 
 Function Custom(int aiIndex, Actor akBottom, Actor akTop) global
     string id = "osf_seduce_custom0" + aiIndex
     Play(id, akBottom, akTop)
+EndFunction
+
+Function CustomPlayerTop(int aiIndex, Actor akNPC) global
+    string id = "osf_seduce_custom0" + aiIndex
+    PlayPlayerTop(id, akNPC)
+EndFunction
+
+Function CustomPlayerBottom(int aiIndex, Actor akNPC) global
+    string id = "osf_seduce_custom0" + aiIndex
+    PlayPlayerBottom(id, akNPC)
 EndFunction
 
 ; Random pick across the whole set (any paired osf-tagged definition).
