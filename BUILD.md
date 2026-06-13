@@ -27,4 +27,4 @@ target mod folder.
 
 Animations and audio are **not** part of this mod — they live in the separate
 **OSF Seduce Animations** pack. This mod triggers scenes by tag (`osf`/`seduce`)
-and requires that pack (or any pack providing matching tags) plus OSF Director.
+and requires that pack (or any pack providing matching tags) plus OSF Animation.

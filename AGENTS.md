@@ -1,7 +1,7 @@
 # OSF Seduce
 
 Papyrus/ESP/content consumer mod built on the OSF framework (native side:
-`C:\Modding\Starfield\OSF Director` — read its `CLAUDE.md` for the OSF API, pack JSON schema,
+`C:\Modding\Starfield\OSF Animation` — read its `CLAUDE.md` for the OSF API, pack JSON schema,
 scheduled-voice model, and cue events before changing content here).
 
 This repo is the **git source of truth**; the live MO2 mod is a deploy copy.
@@ -30,13 +30,15 @@ This repo is the **git source of truth**; the live MO2 mod is a deploy copy.
 ```
 
 Deployment copies `OSFSeduce.esp`, `meta.ini`, `OSF`, `Scripts`, `Sound`; it overwrites but
-never mirror-deletes. ⚠ The default `-Target` is `MO2\mods\OSF Seduce`, but the live MO2 mod
-folder is **`MO2\mods\osf-seduce`** — check which mod MO2 has enabled and pass `-Target`
-explicitly if they disagree (a default run will silently create a second mod folder).
+never mirror-deletes. The default `-Target` is `MO2\mods\OSF Seduce`, which matches the live
+MO2 mod folder as of 2026-06-12 (the old `osf-seduce` folder is gone). ⚠ Still check which
+mod MO2 has enabled before trusting a deploy — if the names disagree, pass `-Target`
+explicitly (a default run will silently create a second mod folder).
 
 ## Test in-game
 
-Enable the mod (+ `OSFDirector`) in MO2, launch via SFSE, then in the console:
+Enable the mod (+ the native plugin mod: `OSF Animation`) in MO2, launch via SFSE, then in
+the console:
 
 ```text
 cgf "OSFSeduce.Bridge" <refA> <refB>     # play the bridge scene
@@ -48,7 +50,8 @@ cgf "OSFSeduce.Reload"                   # rescan Data/OSF packs
 
 Voice/cue behavior arrives via OSF events: `OnOSFCue` keys on `"moan"` / `"climax"`; the top
 actor is `"voice": false` in the pack. Runtime evidence:
-`<Documents>\My Games\Starfield\SFSE\Logs\OSF Director.log`.
+`<Documents>\My Games\Starfield\SFSE\Logs\OSF Director.log` (becomes `OSF Animation.log`
+once the renamed target is deployed — check for both).
 
 ## Gotchas
 

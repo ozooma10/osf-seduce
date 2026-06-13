@@ -7,7 +7,7 @@ human at the keyboard. Check off / delete items as they're confirmed.
 
 - [ ] **Player-in-scene** — Director's CameraService / PlayerControlService
   (force third person, input lock, restore) has never been live-validated
-  (OSF Director CLAUDE.md, AUDIT §13 Q3), and every dialogue path here is a
+  (OSF Animation CLAUDE.md, AUDIT §13 Q3), and every dialogue path here is a
   player scene. Test: `cgf "OSFSeduce.RandomPlayerBottom" <npc>` — camera
   forced to 3rd person, controls locked during, both restored after.
 - [ ] **Loop-count stage advance** — Director marks it "built, untested
