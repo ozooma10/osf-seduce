@@ -11,7 +11,7 @@ $Compiler = "C:\Program Files (x86)\Steam\steamapps\common\Starfield\Tools\Papyr
 $Flags = "C:\Modding\Starfield\PapyrusSource\Starfield_Papyrus_Flags.flg"
 $Imports = @(
     (Join-Path $Root "Scripts\Source"),
-    "C:\Modding\Starfield\OSF Director\dist\Scripts\Source",
+    "C:\Modding\Starfield\OSF Animation\dist\Scripts\Source",
     "C:\Modding\Starfield\PapyrusSource"
 ) -join ";"
 $ScriptOutput = Join-Path $Root "Scripts"

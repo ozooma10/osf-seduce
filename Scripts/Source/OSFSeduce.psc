@@ -25,15 +25,22 @@ Function PrepActors(Actor[] akActors) global
     endwhile
 EndFunction
 
-; --- explicit id play (escape hatch) -----------------------------------------
-; Plays one specific animation by its pack id. This DOES couple the caller to a
-; particular pack's ids; prefer the tag helpers below for pack-agnostic content.
-Function Play(string asId, Actor akBottom, Actor akTop) global
+; The ordered, combat-prepped actor list every play path shares: slot 0 is the
+; bottom, slot 1 is the top. The pack assigns gender slots and its "voice": false
+; key (the silent top) by this order, so it must stay fixed across callers.
+Actor[] Function SceneActors(Actor akBottom, Actor akTop) global
     Actor[] actors = new Actor[2]
     actors[0] = akBottom
     actors[1] = akTop
     PrepActors(actors)
-    bool ok = OSF.PlayDefined(asId, actors, 0)
+    return actors
+EndFunction
+
+; --- explicit id play (escape hatch) -----------------------------------------
+; Plays one specific animation by its pack id. This DOES couple the caller to a
+; particular pack's ids; prefer the tag helpers below for pack-agnostic content.
+Function Play(string asId, Actor akBottom, Actor akTop) global
+    bool ok = OSF.PlayDefined(asId, SceneActors(akBottom, akTop))
     Debug.Trace("OSFSeduce.Play: " + asId + " -> " + ok)
 EndFunction
 
@@ -50,15 +57,11 @@ EndFunction
 ; caller binds to a CONCEPT (the pose) rather than one pack's animation id. Any
 ; pack that tags a scene to match can satisfy these.
 Function PlayTag(string asSubTag, Actor akBottom, Actor akTop) global
-    Actor[] actors = new Actor[2]
-    actors[0] = akBottom
-    actors[1] = akTop
-    PrepActors(actors)
     string[] tags = new string[3]
     tags[0] = "osf"
     tags[1] = "seduce"
     tags[2] = asSubTag
-    string id = OSF.PlayByTags(actors, tags)
+    string id = OSF.PlayByTags(SceneActors(akBottom, akTop), tags)
     Debug.Trace("OSFSeduce.PlayTag: " + asSubTag + " -> " + id)
 EndFunction
 
@@ -124,14 +127,10 @@ EndFunction
 
 ; Random pick across the whole set (any paired osf-tagged definition).
 Function Random(Actor akBottom, Actor akTop) global
-    Actor[] actors = new Actor[2]
-    actors[0] = akBottom
-    actors[1] = akTop
-    PrepActors(actors)
     string[] tags = new string[2]
     tags[0] = "osf"
     tags[1] = "seduce"
-    string id = OSF.PlayByTags(actors, tags)
+    string id = OSF.PlayByTags(SceneActors(akBottom, akTop), tags)
     Debug.Trace("OSFSeduce.Random -> " + id)
 EndFunction
 
