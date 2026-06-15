@@ -23,10 +23,10 @@ human at the keyboard. Check off / delete items as they're confirmed.
 ## New since the audit (verify the fix works)
 
 - [ ] **Male voice set** (pack commit `b78564d`) — with a male voiced
-  participant (e.g. male player as bottom), scheduled moans + climax play.
+  participant (e.g. male player as bottom), scheduled vocals + peak play.
   Then judge the tiers by ear: pools were mirrored from the female set,
   which was itself tiered by a duration heuristic — shuffle misfits between
-  `moans[0..2]` in `OSF/Voices/seduce_male.voice.json`.
+  `vocals[0..2]` in `OSF/Voices/seduce_male.voice.json`.
 - [ ] **Affinity/anger reward** — AffinityAV/AngerAV now resolve
   COM_Affinity `0x000A1B80` / COM_AngerLevel `0x0002DA12` (Starfield.esm;
   extracted from NAFSeduce.esp's quest VMAD, not yet re-verified in-game).
@@ -43,8 +43,8 @@ human at the keyboard. Check off / delete items as they're confirmed.
   an alarmed actor.
 - [ ] **Stage loops 1/3/3** (pack) — scenes now run ~7 clip loops total
   (~2.3 min) matching SAF's shipped defaults; stages 2/3 repeat 3x and the
-  climax fires on stage 3's final loop. Confirm the length feels right and
-  the climax still lands.
+  peak fires on stage 3's final loop. Confirm the length feels right and
+  the peak still lands.
 - [ ] **Erection sceneEquipment** (pack commit `dea2b38` + OSF Animation
   plugin-qualified specs) — the 9 paired animations equip
   "Robert S Body Replacer.esm|0x804" (male) / "Dick.esm|0x81D" (female)

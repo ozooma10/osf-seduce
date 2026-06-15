@@ -40,7 +40,7 @@ EndFunction
 ; Plays one specific animation by its pack id. This DOES couple the caller to a
 ; particular pack's ids; prefer the tag helpers below for pack-agnostic content.
 Function Play(string asId, Actor akBottom, Actor akTop) global
-    bool ok = OSF.PlayDefined(asId, SceneActors(akBottom, akTop))
+    bool ok = OSF.StartScene(SceneActors(akBottom, akTop), asId)
     Debug.Trace("OSFSeduce.Play: " + asId + " -> " + ok)
 EndFunction
 
@@ -61,7 +61,7 @@ Function PlayTag(string asSubTag, Actor akBottom, Actor akTop) global
     tags[0] = "osf"
     tags[1] = "seduce"
     tags[2] = asSubTag
-    string id = OSF.PlayByTags(SceneActors(akBottom, akTop), tags)
+    string id = OSF.StartSceneByTags(SceneActors(akBottom, akTop), tags)
     Debug.Trace("OSFSeduce.PlayTag: " + asSubTag + " -> " + id)
 EndFunction
 
@@ -130,7 +130,7 @@ Function Random(Actor akBottom, Actor akTop) global
     string[] tags = new string[2]
     tags[0] = "osf"
     tags[1] = "seduce"
-    string id = OSF.PlayByTags(SceneActors(akBottom, akTop), tags)
+    string id = OSF.StartSceneByTags(SceneActors(akBottom, akTop), tags)
     Debug.Trace("OSFSeduce.Random -> " + id)
 EndFunction
 

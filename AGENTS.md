@@ -13,9 +13,9 @@ This repo is the **git source of truth**; the live MO2 mod is a deploy copy.
 - `Scripts\Source\Fragments\` — TIF (topic-info fragment) sources; compiled output mirrors to
   `Scripts\` / `Scripts\Fragments\TopicInfos\`.
 - `OSF\SFW\OSFSeduce.json` — the scene pack (animation ids `osf_seduce_*`; SLAL-shaped schema,
-  stages declare `{loops, intensity, climax}` — hand-timed cue ladders were deleted in the
+  stages declare `{loops, intensity, peak}` — hand-timed cue ladders were deleted in the
   scheduled-voice migration). `OSFSeduce.dialogue.json` — dialogue data.
-- `OSF\Voices\seduce_female.voice.json` — voice set (moan pools by intensity + climax pool +
+- `OSF\Voices\seduce_female.voice.json` — voice set (vocal pools by intensity + peak pool +
   interval). Pools were tiered by a duration heuristic — re-tier by ear when touching them.
 - `OSF\Seduce\Animations\` — 54 Seduce GLBs (repackaged SAF_Seduce_ assets: fine locally,
   **DO NOT distribute** without the Seduce author's OK).
@@ -48,7 +48,7 @@ cgf "OSFSeduce.Stop"   <refA>
 cgf "OSFSeduce.Reload"                   # rescan Data/OSF packs
 ```
 
-Voice/cue behavior arrives via OSF events: `OnOSFCue` keys on `"moan"` / `"climax"`; the top
+Voice/cue behavior arrives via OSF events: `OnOSFCue` keys on `"vocal"` / `"peak"`; the top
 actor is `"voice": false` in the pack. Runtime evidence:
 `<Documents>\My Games\Starfield\SFSE\Logs\OSF Director.log` (becomes `OSF Animation.log`
 once the renamed target is deployed — check for both).
