@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "name": "OSF Seduce Animations",
+  "stripActors": false,
+  "scenes": [
+    {
+      "id": "osf_seduce_bridge",
+      "name": "Seduce Bridge",
+      "tags": ["osf", "seduce", "paired", "bridge"],
+      "stages": [
+        ["OSF/Seduce/Animations/bridge01bot.glb", "OSF/Seduce/Animations/bridge01top.glb"],
+        ["OSF/Seduce/Animations/bridge02bot.glb", "OSF/Seduce/Animations/bridge02top.glb"],
+        ["OSF/Seduce/Animations/bridge03bot.glb", "OSF/Seduce/Animations/bridge03top.glb"]
+      ]
+    }
+  ]
+}
