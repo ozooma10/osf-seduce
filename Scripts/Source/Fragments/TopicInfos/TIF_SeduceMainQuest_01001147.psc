@@ -6,7 +6,7 @@ Function Fragment_End(ObjectReference akSpeakerRef)
 Actor akSpeaker = akSpeakerRef as Actor
 ;BEGIN CODE
 if akSpeaker
-    OSFSeduce.RandomPlayerBottom(akSpeaker)
+    OSFSeduce.CustomPlayerBottom(3, akSpeaker)
 endif
 ;END CODE
 EndFunction
