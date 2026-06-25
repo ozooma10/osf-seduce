@@ -17,7 +17,10 @@ $Imports = @(
 $ScriptOutput = Join-Path $Root "Scripts"
 
 function Invoke-PapyrusCompile {
-    param([string]$ScriptName)
+    param(
+        [string]$Target,
+        [switch]$All
+    )
 
     if (!(Test-Path -LiteralPath $Compiler)) {
         throw "Papyrus compiler not found: $Compiler"
@@ -26,12 +29,15 @@ function Invoke-PapyrusCompile {
         throw "Papyrus flags file not found: $Flags"
     }
 
-    Write-Host "Compiling $ScriptName"
-    $output = & $Compiler $ScriptName "-i=$Imports" "-o=$ScriptOutput" "-f=$Flags" 2>&1
+    $args = @($Target, "-i=$Imports", "-o=$ScriptOutput", "-f=$Flags")
+    if ($All) { $args += "-all" }
+
+    Write-Host "Compiling $Target"
+    $output = & $Compiler @args 2>&1
     $output | ForEach-Object { Write-Host $_ }
 
-    if ($LASTEXITCODE -ne 0 -or ($output -match "compilation failed|Failed on|Assembly failed")) {
-        throw "Papyrus compile failed for $ScriptName"
+    if ($LASTEXITCODE -ne 0 -or ($output -match "compilation failed|Failed on|Assembly failed|[1-9]\d* failed")) {
+        throw "Papyrus compile failed for $Target"
     }
 }
 
@@ -55,13 +61,10 @@ function Copy-ModItem {
 }
 
 if (!$NoCompile) {
-    Invoke-PapyrusCompile "OSFSeduce"
-
-    Get-ChildItem -LiteralPath (Join-Path $Root "Scripts\Source\Fragments\TopicInfos") -Filter "*.psc" |
-        Sort-Object Name |
-        ForEach-Object {
-            Invoke-PapyrusCompile ("Fragments:TopicInfos:" + $_.BaseName)
-        }
+    # One batch invocation compiles OSFSeduce.psc + all Fragments\TopicInfos\*.psc
+    # in a single process. The compiler loads the (large) import tree once and
+    # compiles in parallel, instead of paying that startup cost per script.
+    Invoke-PapyrusCompile (Join-Path $Root "Scripts\Source") -All
 }
 
 if (!$NoDeploy) {

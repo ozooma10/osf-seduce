@@ -1,7 +1,6 @@
 {
   "schema": 1,
   "name": "OSF Seduce Animations",
-  "stripActors": false,
   "scenes": [
     {
       "id": "osf_seduce_bridge",
