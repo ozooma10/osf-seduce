@@ -6,8 +6,7 @@ receives cue events for anything Papyrus-side (HUD, affinity, quest hooks).
 Moan audio needs NO code here — pack cues carry the sounds.}
 
 Function RegisterEvents() global
-    ; OSF.RegisterSceneCallback("OSFSeduce", "OnOSFScene")
-    ; OSF.RegisterCueCallback("OSFSeduce", "OnOSFCue")
+    OSF.RegisterSceneCallbackStatic("OSFSeduce", "OnSceneEnd", 0, OSF.EVENT_SCENE_END())
 EndFunction
 
 ; Pre-scene actor prep (SAF parity): drop any combat alarm and sheathe weapons
@@ -40,7 +39,11 @@ EndFunction
 ; Plays one specific animation by its pack id. This DOES couple the caller to a
 ; particular pack's ids; prefer the tag helpers below for pack-agnostic content.
 Function Play(string asId, Actor akBottom, Actor akTop) global
-    bool ok = OSF.StartScene(SceneActors(akBottom, akTop), asId)
+    Actor[] sceneActors = SceneActors(akBottom, akTop)
+    bool ok = OSF.StartScene(sceneActors, asId)
+    if ok
+        OnSceneStart(sceneActors)
+    endif
     Debug.Trace("OSFSeduce.Play: " + asId + " -> " + ok)
 EndFunction
 
@@ -57,12 +60,15 @@ EndFunction
 ; caller binds to a CONCEPT (the pose) rather than one pack's animation id. Any
 ; pack that tags a scene to match can satisfy these.
 Function PlayTag(string asSubTag, Actor akBottom, Actor akTop) global
-    string[] tags = new string[3]
-    ; tags[0] = "osf"
-    ; tags[1] = "seduce"
-    tags[2] = asSubTag
-    string id = OSF.StartSceneByTags(SceneActors(akBottom, akTop), tags)
+    string[] tags = new string[1]
+    tags[0] = asSubTag
+    Actor[] sceneActors = SceneActors(akBottom, akTop)
+    
+    string id = OSF.StartSceneByTags(sceneActors, tags)
     Debug.Trace("OSFSeduce.PlayTag: " + asSubTag + " -> " + id)
+    if id
+        OnSceneStart(sceneActors)
+    endif
 EndFunction
 
 Function PlayTagPlayerTop(string asSubTag, Actor akNPC) global
@@ -130,7 +136,11 @@ Function Random(Actor akBottom, Actor akTop) global
     string[] tags = new string[2]
     tags[0] = "osf"
     tags[1] = "seduce"
-    string id = OSF.StartSceneByTags(SceneActors(akBottom, akTop), tags)
+    Actor[] sceneActors = SceneActors(akBottom, akTop)
+    string id = OSF.StartSceneByTags(sceneActors, tags)
+    if id > 0
+        OnSceneStart(sceneActors)
+    endif
     Debug.Trace("OSFSeduce.Random -> " + id)
 EndFunction
 
@@ -170,113 +180,66 @@ EndFunction
 ; argument-derived, and form-free wherever possible.
 ; ---------------------------------------------------------------------------
 
-; ; -- config (compile-time literals; flip here, or shadow from the ESM layer) --
-; bool Function CfgFeedback() global        ; HUD notifications on scene start/end
-;     return true
-; EndFunction
-; bool Function CfgChangeAffinity() global  ; warm the NPC partner on a finished scene
-;     return true
-; EndFunction
-; float Function CfgAffinityGain() global  ; SAF Seduce's shipped default
-;     return 25.0
-; EndFunction
-; float Function CfgAngerDrop() global     ; SAF default unknown (its menu never resets it)
-;     return 5.0
-; EndFunction
+; -- config (compile-time literals; flip here, or shadow from the ESM layer) --
+bool Function CfgFeedback() global        ; HUD notifications on scene start/end
+    return true
+EndFunction
+bool Function CfgChangeAffinity() global  ; warm the NPC partner on a finished scene
+    return true
+EndFunction
+float Function CfgAffinityGain() global  ; SAF Seduce's shipped default
+    return 25.0
+EndFunction
+float Function CfgAngerDrop() global     ; SAF default unknown (its menu never resets it)
+    return 5.0
+EndFunction
 
-; ; Companion affinity / anger ActorValues. A global function can't hold a filled
-; ; Property, so these resolve the base-game forms by id. FormIDs extracted from
-; ; NAFSeduce.esp's quest VMAD (the COM_Affinity / COM_AngerLevel bindings SAF
-; ; Seduce shipped with) — not yet re-verified in-game here. If a game patch ever
-; ; moves them, a None return makes the reward no-op safely.
-; ActorValue Function AffinityAV() global
-;     return Game.GetFormFromFile(0x000A1B80, "Starfield.esm") as ActorValue
-; EndFunction
-; ActorValue Function AngerAV() global
-;     return Game.GetFormFromFile(0x0002DA12, "Starfield.esm") as ActorValue
-; EndFunction
+; Companion affinity / anger ActorValues. A global function can't hold a filled
+; Property, so these resolve the base-game forms by id. FormIDs extracted from
+; NAFSeduce.esp's quest VMAD (the COM_Affinity / COM_AngerLevel bindings SAF
+; Seduce shipped with) — not yet re-verified in-game here. If a game patch ever
+; moves them, a None return makes the reward no-op safely.
+ActorValue Function AffinityAV() global
+    return Game.GetFormFromFile(0x000A1B80, "Starfield.esm") as ActorValue
+EndFunction
+ActorValue Function AngerAV() global
+    return Game.GetFormFromFile(0x0002DA12, "Starfield.esm") as ActorValue
+EndFunction
 
-; Function OnOSFScene(string asEvent, Actor[] akActors, int aiStage) global
-;     if asEvent == "start"
-;         OnSceneStart(akActors)
-;     elseif asEvent == "end"
-;         OnSceneEnd(akActors)
-;     endif
-;     ; "stage" / "loop" arrive here too — slot handlers in as needed.
-;     Debug.Trace("OSFSeduce.OnOSFScene: " + asEvent + " stage=" + aiStage + " actors=" + akActors.Length)
-; EndFunction
+Function OnSceneEnd(OSFTypes:SceneEvent akEvent) global
+    Actor[] akActors = OSF.GetSceneParticipants(akEvent.sceneHandle)
+    int i = 0
+    while i < akActors.Length
+        Actor a = akActors[i]
+        if a && a != Game.GetPlayer()
+            ApplyRelationshipReward(a)
+        endif
+        i = i + 1
+    endwhile
+    if CfgFeedback()
+        Debug.Notification("OSF Seduce: scene ended")
+    endif
+EndFunction
 
-; Function OnSceneStart(Actor[] akActors) global
-;     if CfgFeedback()
-;         Debug.Notification("OSF Seduce: scene started")
-;     endif
-; EndFunction
+Function OnSceneStart(Actor[] akActors) global
+    if CfgFeedback()
+        Debug.Notification("OSF Seduce: scene started")
+    endif
+EndFunction
 
-; Function OnSceneEnd(Actor[] akActors) global
-;     ; The climax sound is now a lastLoop cue in the pack (fires once on the final
-;     ; loop of stage 3, correctly timed and positioned), so nothing to play here.
-;     ; SAF-style reward: nudge every NPC partner's standing toward the player.
-;     ; CAVEAT: "end" also fires on StopScene / save-load teardown, so a stricter
-;     ; mod should gate the reward on the "orgasm" cue (genuine completion) and
-;     ; track it in an ESM quest; this stateless reference rewards on any end.
-;     int i = 0
-;     while i < akActors.Length
-;         Actor a = akActors[i]
-;         if a && a != Game.GetPlayer()
-;             ApplyRelationshipReward(a)
-;         endif
-;         i = i + 1
-;     endwhile
-;     if CfgFeedback()
-;         Debug.Notification("OSF Seduce: scene ended")
-;     endif
-; EndFunction
-
-; ; Mirrors SAF's SetRelationships: + affinity, - anger on the NPC, gated by
-; ; config and guarded on the ActorValues resolving (no-op if AffinityAV is None).
-; Function ApplyRelationshipReward(Actor akNPC) global
-;     if !CfgChangeAffinity()
-;         return
-;     endif
-;     ActorValue av = AffinityAV()
-;     if av
-;         akNPC.SetValue(av, akNPC.GetValue(av) + CfgAffinityGain())
-;         Debug.Trace("OSFSeduce: +" + CfgAffinityGain() + " affinity on " + akNPC)
-;     endif
-;     ActorValue anger = AngerAV()
-;     if anger
-;         akNPC.SetValue(anger, akNPC.GetValue(anger) - CfgAngerDrop())
-;     endif
-; EndFunction
-
-; Function OnOSFCue(string asCue, Actor akActor, int aiStage, float afTime) global
-;     ; Per-cue policy. The DLL already voiced the moan from the pack; this hook is
-;     ; for gameplay/visual reactions. Dispatch on the cue tag so reactions can be
-;     ; keyed to intensity (short/med/loud). akActor is the cue's target (slot 0,
-;     ; the moaning actor).
-;     if asCue == "moan_short"
-;         OnCueMoan(akActor, 1)
-;     elseif asCue == "moan_med"
-;         OnCueMoan(akActor, 2)
-;     elseif asCue == "moan_loud"
-;         OnCueMoan(akActor, 3)
-;     elseif asCue == "orgasm"
-;         OnCueClimax(akActor)
-;     endif
-;     Debug.Trace("OSFSeduce.OnOSFCue: " + asCue + " stage=" + aiStage + " time=" + afTime + " actor=" + akActor)
-; EndFunction
-
-; ; Reference reaction per moan tier (1=short, 2=med, 3=loud). No gameplay effect
-; ; by default — the sound is already playing. Extension points for content: drive
-; ; a facial morph, partner dialogue, a screen pulse, or feed an arousal meter
-; ; (accumulate the meter in the ESM quest, since this handler is stateless).
-; Function OnCueMoan(Actor akActor, int aiIntensity) global
-; EndFunction
-
-; ; Climax: the "orgasm" cue (lastLoop in the pack) fires once on the final loop
-; ; of the last stage. The DLL already played the climax sound from the cue's
-; ; "$moan_loud" pool; this is the reliable "scene completed for real" signal
-; ; (unlike "end", which also fires on teardown). akActor is the moaning actor —
-; ; a content/ESM layer can hang fade-out, dialogue, or the affinity reward here.
-; Function OnCueClimax(Actor akActor) global
-; EndFunction
+; Mirrors SAF's SetRelationships: + affinity, - anger on the NPC, gated by
+; config and guarded on the ActorValues resolving (no-op if AffinityAV is None).
+Function ApplyRelationshipReward(Actor akNPC) global
+    if !CfgChangeAffinity()
+        return
+    endif
+    ActorValue av = AffinityAV()
+    if av
+        akNPC.SetValue(av, akNPC.GetValue(av) + CfgAffinityGain())
+        Debug.Trace("OSFSeduce: +" + CfgAffinityGain() + " affinity on " + akNPC)
+    endif
+    ActorValue anger = AngerAV()
+    if anger
+        akNPC.SetValue(anger, akNPC.GetValue(anger) - CfgAngerDrop())
+    endif
+EndFunction
