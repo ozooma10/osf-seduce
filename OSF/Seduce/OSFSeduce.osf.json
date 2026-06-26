@@ -12,43 +12,52 @@
         {
           "loops": 1,
           "clips": ["OSF/Seduce/Animations/bridge01bot.glb", "OSF/Seduce/Animations/bridge01top.glb"],
-          "sound": {
-            "role": "bottom", "repeat": "loop", "spec": "$seduce,{gender},moan",
-            "marks": {
-              "med": [0.013, 0.200, 0.370, 0.455],
-              "low": [0.106, 0.285, 0.540, 0.610, 0.673, 0.735, 0.798, 0.860]
+          "sound": [
+            {
+              "role": "bottom", "repeat": "loop", "spec": "$seduce,{gender},moan",
+              "marks": { "med": [0.013, 0.200, 0.370], "low": [0.540, 0.673, 0.798] }
+            },
+            {
+              "role": "top", "repeat": "loop", "spec": "$seduce,{gender},moan",
+              "marks": { "low": [0.106, 0.285, 0.610, 0.735, 0.860], "med": [0.455] }
             }
-          }
+          ]
         },
         {
           "loops": 3,
           "clips": ["OSF/Seduce/Animations/bridge02bot.glb", "OSF/Seduce/Animations/bridge02top.glb"],
-          "sound": {
-            "role": "bottom", "repeat": "loop", "spec": "$seduce,{gender},moan",
-            "marks": {
-              "low": [0.031, 0.094, 0.156, 0.219, 0.281, 0.344, 0.406, 0.466, 0.516, 0.566, 0.782, 0.960],
-              "loud": [0.616, 0.658, 0.699, 0.741, 0.832, 0.897]
+          "sound": [
+            {
+              "role": "bottom", "repeat": "loop", "spec": "$seduce,{gender},moan",
+              "marks": { "low": [0.031, 0.156, 0.281, 0.406, 0.516, 0.782], "loud": [0.616, 0.699, 0.897] }
+            },
+            {
+              "role": "top", "repeat": "loop", "spec": "$seduce,{gender},moan",
+              "marks": { "low": [0.094, 0.219, 0.344, 0.466, 0.566, 0.960], "loud": [0.658, 0.741, 0.832] }
             }
-          }
+          ]
         },
         {
           "loops": 3,
           "clips": ["OSF/Seduce/Animations/bridge03bot.glb", "OSF/Seduce/Animations/bridge03top.glb"],
-          "sound": {
-            "role": "bottom", "repeat": "loop", "spec": "$seduce,{gender},moan",
-            "marks": {
-              "loud": [0.050, 0.100, 0.200, 0.250, 0.325, 0.475, 0.525, 0.575, 0.650, 0.700, 0.838, 0.888, 0.963],
-              "med": [0.375, 0.750]
+          "sound": [
+            {
+              "role": "bottom", "repeat": "loop", "spec": "$seduce,{gender},moan",
+              "marks": { "loud": [0.050, 0.200, 0.325, 0.475, 0.575, 0.700, 0.838, 0.963] }
+            },
+            {
+              "role": "top", "repeat": "loop", "spec": "$seduce,{gender},moan",
+              "marks": { "loud": [0.100, 0.250, 0.525, 0.650, 0.888], "med": [0.375, 0.750] }
             }
-          }
+          ]
         },
         {
           "loops": 1,
           "clips": ["OSF/Seduce/Animations/bridge03bot.glb", "OSF/Seduce/Animations/bridge03top.glb"],
-          "sound": {
-            "role": "bottom", "spec": "$seduce,{gender},climax",
-            "marks": [ 0.300 ]
-          },
+          "sound": [
+            { "role": "bottom", "spec": "$seduce,{gender},climax", "marks": [0.300] },
+            { "role": "top",    "spec": "$seduce,{gender},climax", "marks": [0.300] }
+          ],
           "cue": [ { "at": "exit", "id": "orgasm" } ]
         }
       ]
