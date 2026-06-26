@@ -55,8 +55,10 @@
           "loops": 1,
           "clips": ["OSF/Seduce/Animations/bridge03bot.glb", "OSF/Seduce/Animations/bridge03top.glb"],
           "sound": [
-            { "role": "bottom", "spec": "$seduce,{gender},climax", "marks": [0.300] },
-            { "role": "top",    "spec": "$seduce,{gender},climax", "marks": [0.300] }
+            { "role": "bottom", "spec": "$seduce,{gender},moan",   "marks": { "loud": [0.060, 0.190, 0.280], "low": [0.620, 0.880] } },
+            { "role": "bottom", "spec": "$seduce,{gender},climax", "marks": [0.320] },
+            { "role": "top",    "spec": "$seduce,{gender},moan",   "marks": { "loud": [0.130, 0.240], "low": [0.750] } },
+            { "role": "top",    "spec": "$seduce,{gender},climax", "marks": [0.350] }
           ],
           "cue": [ { "at": "exit", "id": "orgasm" } ]
         }
