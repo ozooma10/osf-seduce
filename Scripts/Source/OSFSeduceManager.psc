@@ -10,6 +10,14 @@ GlobalVariable Property SeduceAffinityIncreaseGlobal Auto    ; affinity added pe
 GlobalVariable Property SeduceChangeAngerLevelGlobal Auto    ; 0/1 -- apply anger reduction?
 GlobalVariable Property SeduceAngerLevelDecreaseGlobal Auto  ; anger subtracted per finished scene
 
+; --- per-start scene overrides (fed to OSFTypes:SceneOptions at scene start) ----
+; Tri-states store the OSF convention: -1 inherit the pack default, 0 force OFF, 1 force ON.
+; Set the GlobalVariable record defaults in CK to -1 / -1 / -1 / 1.0 so an un-touched config = no override.
+GlobalVariable Property SeduceStripMode Auto         ; strip actors:  -1 inherit / 0 off / 1 on
+GlobalVariable Property SeduceLockPlayerMode Auto    ; lock player:   -1 inherit / 0 off / 1 on
+GlobalVariable Property SeduceFadeMode Auto          ; start fade:    -1 inherit / 0 off / 1 on
+GlobalVariable Property SeduceLoopScale Auto         ; scene length multiplier (1.0 = unchanged)
+
 ; --- the relationship ActorValues ------------
 ActorValue Property COM_Affinity Auto
 ActorValue Property COM_AngerLevel Auto
@@ -121,18 +129,112 @@ Function NudgeAngerAmount(float afDelta)
     SeduceAngerLevelDecreaseGlobal.SetValue(v)
 EndFunction
 
-; Restore SAF's shipped defaults in one button.
+; Restore shipped defaults in one button (affinity/anger AND the scene overrides).
 Function ResetConfigDefaults()
     SeduceChangeAffinityGlobal.SetValue(1.0)
     SeduceAffinityIncreaseGlobal.SetValue(25.0)
     SeduceChangeAngerLevelGlobal.SetValue(1.0)
     SeduceAngerLevelDecreaseGlobal.SetValue(5.0)
+    SeduceStripMode.SetValue(-1.0)       ; inherit
+    SeduceLockPlayerMode.SetValue(-1.0)  ; inherit
+    SeduceFadeMode.SetValue(-1.0)        ; inherit
+    SeduceLoopScale.SetValue(1.0)        ; no scaling
 EndFunction
 
 ; Read current settings to the HUD (terminal "show settings" button).
 Function ShowConfig()
     Debug.Notification("Affinity reward: " + (SeduceChangeAffinityGlobal.GetValue() as int) + " (amount " + (SeduceAffinityIncreaseGlobal.GetValue() as int) + ")")
     Debug.Notification("Anger reduction: " + (SeduceChangeAngerLevelGlobal.GetValue() as int) + " (amount " + (SeduceAngerLevelDecreaseGlobal.GetValue() as int) + ")")
+    Debug.Notification("Strip: " + TriStateLabel(SeduceStripMode) + " | Lock player: " + TriStateLabel(SeduceLockPlayerMode) + " | Fade: " + TriStateLabel(SeduceFadeMode))
+    Debug.Notification("Scene length: " + SeduceLoopScale.GetValue() + "x")
+EndFunction
+
+; ---------------------------------------------------------------------------
+; Scene-override config -- read by BuildSceneOptions at scene start, mutated by
+; the companion terminal. Tri-states use the OSF convention (-1/0/1).
+; ---------------------------------------------------------------------------
+
+; Build the per-start SceneOptions from the current config. Each field is only
+; written when its GlobalVariable property is filled; an unfilled one leaves the
+; struct default (StripMode/.. = -1 inherit, LoopScale = 1.0 no-op), so a missing
+; record can never accidentally force a policy off.
+OSFTypes:SceneOptions Function BuildSceneOptions()
+    OSFTypes:SceneOptions opts = new OSFTypes:SceneOptions
+    if SeduceStripMode
+        opts.StripMode = SeduceStripMode.GetValue() as int
+    endif
+    if SeduceLockPlayerMode
+        opts.LockPlayerMode = SeduceLockPlayerMode.GetValue() as int
+    endif
+    if SeduceFadeMode
+        opts.FadeMode = SeduceFadeMode.GetValue() as int
+    endif
+    if SeduceLoopScale
+        opts.LoopScale = SeduceLoopScale.GetValue()
+    endif
+    return opts
+EndFunction
+
+; Stateless bridge for the dialogue fragments: cast a passed-in quest (the topic's
+; GetOwningQuest()) to this manager and return its configured SceneOptions, or None
+; if the cast fails (manager not on that quest) so the scene still plays with pack
+; defaults. Global so a TIF fragment can call it without holding a property:
+;   OSFSeduce.BridgePlayerTop(akSpeaker, OSFSeduceManager.OptsFromQuest(GetOwningQuest()))
+OSFTypes:SceneOptions Function OptsFromQuest(Quest akQuest) global
+    OSFSeduceManager mgr = akQuest as OSFSeduceManager
+    if mgr
+        return mgr.BuildSceneOptions()
+    endif
+    return None
+EndFunction
+
+; Terminal mutators -- cycle the tri-states INHERIT -> OFF -> ON -> INHERIT.
+Function CycleStripMode()
+    SeduceStripMode.SetValue(NextTriState(SeduceStripMode.GetValue()))
+EndFunction
+
+Function CycleLockPlayerMode()
+    SeduceLockPlayerMode.SetValue(NextTriState(SeduceLockPlayerMode.GetValue()))
+EndFunction
+
+Function CycleFadeMode()
+    SeduceFadeMode.SetValue(NextTriState(SeduceFadeMode.GetValue()))
+EndFunction
+
+; Scene length: step the multiplier and clamp to a sane 0.25 .. 5.0 (the Director
+; hard-caps at 20x; this terminal range is the practical one).
+Function NudgeLoopScale(float afDelta)
+    float v = SeduceLoopScale.GetValue() + afDelta
+    if v < 0.25
+        v = 0.25
+    elseif v > 5.0
+        v = 5.0
+    endif
+    SeduceLoopScale.SetValue(v)
+EndFunction
+
+; -1 -> 0 -> 1 -> -1
+float Function NextTriState(float afValue)
+    int v = afValue as int
+    if v == -1
+        return 0.0
+    elseif v == 0
+        return 1.0
+    endif
+    return -1.0
+EndFunction
+
+string Function TriStateLabel(GlobalVariable akMode)
+    if !akMode
+        return "inherit"
+    endif
+    int v = akMode.GetValue() as int
+    if v == 0
+        return "off"
+    elseif v == 1
+        return "on"
+    endif
+    return "inherit"
 EndFunction
 
 ; ---------------------------------------------------------------------------

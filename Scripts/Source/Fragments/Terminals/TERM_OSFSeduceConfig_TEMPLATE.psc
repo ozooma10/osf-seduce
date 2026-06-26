@@ -1,10 +1,11 @@
 ;BEGIN FRAGMENT CODE - Do not edit anything between this and the end comment
 ; TEMPLATE -- OSF Seduce config terminal, mirroring SAF Seduce's terminals as far as OSF allows.
 ;
-; ONLY the affinity/anger rewards + a small debug section are settable: everything else SAF's
-; terminals controlled (stage loop counts, strip/undress, anim sync, fade, erection equip, camera,
-; player-lock) is now either baked into the pack JSON or handled automatically by the Director, with
-; no Papyrus toggle. Those SAF menus have NO OSF equivalent and are intentionally omitted.
+; Settable here: affinity/anger rewards, the per-start scene overrides (strip / player-lock / fade /
+; scene length), and a small debug section. These ride OSFTypes:SceneOptions, which the dialogue
+; fragments pass at scene start via OSFSeduceManager.OptsFromQuest(GetOwningQuest()).
+; Still NOT settable (no OSF equivalent -- pack-authored or automatic): anim sync, erection/equip,
+; camera, and exact per-stage loop counts (LoopScale scales them as a group instead).
 ;
 ; The actual logic lives on OSFSeduceManager (version-controlled); these fragments are one-liners.
 ;
@@ -123,6 +124,51 @@ EndFunction
 Function Fragment_TerminalMenu_11(ObjectReference akTerminalRef)
 ;BEGIN CODE
 OSFSeduceMgr.ShowVersion()
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_TerminalMenu_12   ; "Strip actors: cycle inherit/off/on"
+Function Fragment_TerminalMenu_12(ObjectReference akTerminalRef)
+;BEGIN CODE
+OSFSeduceMgr.CycleStripMode()
+OSFSeduceMgr.ShowConfig()
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_TerminalMenu_13   ; "Lock player: cycle inherit/off/on"
+Function Fragment_TerminalMenu_13(ObjectReference akTerminalRef)
+;BEGIN CODE
+OSFSeduceMgr.CycleLockPlayerMode()
+OSFSeduceMgr.ShowConfig()
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_TerminalMenu_14   ; "Start fade: cycle inherit/off/on"
+Function Fragment_TerminalMenu_14(ObjectReference akTerminalRef)
+;BEGIN CODE
+OSFSeduceMgr.CycleFadeMode()
+OSFSeduceMgr.ShowConfig()
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_TerminalMenu_15   ; "Scene length +0.25x"
+Function Fragment_TerminalMenu_15(ObjectReference akTerminalRef)
+;BEGIN CODE
+OSFSeduceMgr.NudgeLoopScale(0.25)
+OSFSeduceMgr.ShowConfig()
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_TerminalMenu_16   ; "Scene length -0.25x"
+Function Fragment_TerminalMenu_16(ObjectReference akTerminalRef)
+;BEGIN CODE
+OSFSeduceMgr.NudgeLoopScale(-0.25)
+OSFSeduceMgr.ShowConfig()
 ;END CODE
 EndFunction
 ;END FRAGMENT

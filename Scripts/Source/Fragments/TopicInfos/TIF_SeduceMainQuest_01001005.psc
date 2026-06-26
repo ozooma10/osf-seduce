@@ -6,7 +6,7 @@ Function Fragment_End(ObjectReference akSpeakerRef)
 Actor akSpeaker = akSpeakerRef as Actor
 ;BEGIN CODE
 if akSpeaker
-    OSFSeduce.EaglePlayerTop(akSpeaker)
+    OSFSeduce.EaglePlayerTop(akSpeaker, OSFSeduceManager.OptsFromQuest(GetOwningQuest()))
 endif
 ;END CODE
 EndFunction
