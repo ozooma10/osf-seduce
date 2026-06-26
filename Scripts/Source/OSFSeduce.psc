@@ -24,11 +24,7 @@ EndFunction
 ; Plays one specific animation by its pack id. This DOES couple the caller to a
 ; particular pack's ids; prefer the tag helpers below for pack-agnostic content.
 Function Play(string asId, Actor akBottom, Actor akTop) global
-    Actor[] sceneActors = SceneActors(akBottom, akTop)
-    bool ok = OSF.StartScene(sceneActors, asId)
-    if ok
-        OnSceneStart(sceneActors)
-    endif
+    bool ok = OSF.StartScene(SceneActors(akBottom, akTop), asId)
     Debug.Trace("OSFSeduce.Play: " + asId + " -> " + ok)
 EndFunction
 
@@ -47,13 +43,8 @@ EndFunction
 Function PlayTag(string asSubTag, Actor akBottom, Actor akTop) global
     string[] tags = new string[1]
     tags[0] = asSubTag
-    Actor[] sceneActors = SceneActors(akBottom, akTop)
-    
-    string id = OSF.StartSceneByTags(sceneActors, tags)
+    string id = OSF.StartSceneByTags(SceneActors(akBottom, akTop), tags)
     Debug.Trace("OSFSeduce.PlayTag: " + asSubTag + " -> " + id)
-    if id
-        OnSceneStart(sceneActors)
-    endif
 EndFunction
 
 Function PlayTagPlayerTop(string asSubTag, Actor akNPC) global
@@ -121,11 +112,7 @@ Function Random(Actor akBottom, Actor akTop) global
     string[] tags = new string[2]
     tags[0] = "osf"
     tags[1] = "seduce"
-    Actor[] sceneActors = SceneActors(akBottom, akTop)
-    string id = OSF.StartSceneByTags(sceneActors, tags)
-    if id > 0
-        OnSceneStart(sceneActors)
-    endif
+    string id = OSF.StartSceneByTags(SceneActors(akBottom, akTop), tags)
     Debug.Trace("OSFSeduce.Random -> " + id)
 EndFunction
 
@@ -152,10 +139,3 @@ Function Reload() global
     Debug.Notification("OSF Seduce: " + count + " animations registered")
 EndFunction
 
-; --- stateless scene-start feedback ------------------------------------------
-; The play helpers above call this directly (it is NOT a DLL callback). Stateful
-; reactions — the affinity reward, scene-end notification, runtime config — live
-; on OSFSeduceManager, which registers for the cue/scene-end events itself.
-Function OnSceneStart(Actor[] akActors) global
-    Debug.Notification("OSF Seduce: scene started")
-EndFunction
