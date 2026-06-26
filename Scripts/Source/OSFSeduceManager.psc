@@ -14,8 +14,6 @@ GlobalVariable Property SeduceAngerLevelDecreaseGlobal Auto  ; anger subtracted 
 ; Tri-states store the OSF convention: -1 inherit the pack default, 0 force OFF, 1 force ON.
 ; Set the GlobalVariable record defaults in CK to -1 / -1 / -1 / 1.0 so an un-touched config = no override.
 GlobalVariable Property SeduceStripMode Auto         ; strip actors:  -1 inherit / 0 off / 1 on
-GlobalVariable Property SeduceLockPlayerMode Auto    ; lock player:   -1 inherit / 0 off / 1 on
-GlobalVariable Property SeduceFadeMode Auto          ; start fade:    -1 inherit / 0 off / 1 on
 GlobalVariable Property SeduceLoopScale Auto         ; scene length multiplier (1.0 = unchanged)
 
 ; --- the relationship ActorValues ------------
@@ -136,8 +134,6 @@ Function ResetConfigDefaults()
     SeduceChangeAngerLevelGlobal.SetValue(1.0)
     SeduceAngerLevelDecreaseGlobal.SetValue(5.0)
     SeduceStripMode.SetValue(-1.0)       ; inherit
-    SeduceLockPlayerMode.SetValue(-1.0)  ; inherit
-    SeduceFadeMode.SetValue(-1.0)        ; inherit
     SeduceLoopScale.SetValue(1.0)        ; no scaling
 EndFunction
 
@@ -145,7 +141,7 @@ EndFunction
 Function ShowConfig()
     Debug.Notification("Affinity reward: " + (SeduceChangeAffinityGlobal.GetValue() as int) + " (amount " + (SeduceAffinityIncreaseGlobal.GetValue() as int) + ")")
     Debug.Notification("Anger reduction: " + (SeduceChangeAngerLevelGlobal.GetValue() as int) + " (amount " + (SeduceAngerLevelDecreaseGlobal.GetValue() as int) + ")")
-    Debug.Notification("Strip: " + TriStateLabel(SeduceStripMode) + " | Lock player: " + TriStateLabel(SeduceLockPlayerMode) + " | Fade: " + TriStateLabel(SeduceFadeMode))
+    Debug.Notification("Strip: " + TriStateLabel(SeduceStripMode))
     Debug.Notification("Scene length: " + SeduceLoopScale.GetValue() + "x")
 EndFunction
 
@@ -162,12 +158,6 @@ OSFTypes:SceneOptions Function BuildSceneOptions()
     OSFTypes:SceneOptions opts = new OSFTypes:SceneOptions
     if SeduceStripMode
         opts.StripMode = SeduceStripMode.GetValue() as int
-    endif
-    if SeduceLockPlayerMode
-        opts.LockPlayerMode = SeduceLockPlayerMode.GetValue() as int
-    endif
-    if SeduceFadeMode
-        opts.FadeMode = SeduceFadeMode.GetValue() as int
     endif
     if SeduceLoopScale
         opts.LoopScale = SeduceLoopScale.GetValue()
@@ -193,24 +183,21 @@ Function CycleStripMode()
     SeduceStripMode.SetValue(NextTriState(SeduceStripMode.GetValue()))
 EndFunction
 
-Function CycleLockPlayerMode()
-    SeduceLockPlayerMode.SetValue(NextTriState(SeduceLockPlayerMode.GetValue()))
-EndFunction
-
-Function CycleFadeMode()
-    SeduceFadeMode.SetValue(NextTriState(SeduceFadeMode.GetValue()))
-EndFunction
-
-; Scene length: step the multiplier and clamp to a sane 0.25 .. 5.0 (the Director
-; hard-caps at 20x; this terminal range is the practical one).
-Function NudgeLoopScale(float afDelta)
-    float v = SeduceLoopScale.GetValue() + afDelta
+; Scene length: set the multiplier directly (terminal presets), clamped to a sane
+; 0.25 .. 5.0 (the Director hard-caps at 20x; this terminal range is the practical one).
+Function SetLoopScale(float afValue)
+    float v = afValue
     if v < 0.25
         v = 0.25
     elseif v > 5.0
         v = 5.0
     endif
     SeduceLoopScale.SetValue(v)
+EndFunction
+
+; Step the multiplier by afDelta (fine +/- buttons); shares SetLoopScale's clamp.
+Function NudgeLoopScale(float afDelta)
+    SetLoopScale(SeduceLoopScale.GetValue() + afDelta)
 EndFunction
 
 ; -1 -> 0 -> 1 -> -1
