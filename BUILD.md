@@ -6,11 +6,10 @@ Run from this folder:
 .\Build.ps1
 ```
 
-That compiles `OSFSeduce.psc` plus all TIF fragment sources, then deploys the mod
-payload to:
+That compiles `OSFSeduce.psc`, `OSFSeduceManager.psc`, and the fragment sources, then deploys the bridge mod payload to the sibling MO2 folder:
 
 ```text
-C:\Modding\Starfield\MO2\mods\OSF Seduce
+..\MO2\mods\OSF Seduce
 ```
 
 Useful variants:
@@ -18,13 +17,15 @@ Useful variants:
 ```powershell
 .\Build.ps1 -NoDeploy
 .\Build.ps1 -NoCompile
-.\Build.ps1 -Target "C:\Modding\Starfield\MO2\mods\OSF Seduce"
+.\Build.ps1 -Target "C:\Path\To\MO2\mods\OSF Seduce"
 ```
 
-Deployment copies `OSFSeduce.esp`, `meta.ini`, `OSF`, and `Scripts`.
-It overwrites matching files but does not mirror-delete unrelated files from the
-target mod folder.
+Deployment copies:
 
-Animations and audio are **not** part of this mod — they live in the separate
-**OSF Seduce Animations** pack. This mod triggers scenes by tag (`osf`/`seduce`)
-and requires that pack (or any pack providing matching tags) plus OSF Animation.
+- `OSFSeduce.esp`
+- `meta.ini`
+- `Scripts`
+- `OSF`
+- `Sound`
+
+It overwrites matching files but does not mirror-delete unrelated files from the target mod folder.

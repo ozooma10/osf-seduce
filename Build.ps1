@@ -1,5 +1,5 @@
 param(
-    [string]$Target = "C:\Modding\Starfield\MO2\mods\OSF Seduce",
+    [string]$Target,
     [switch]$NoCompile,
     [switch]$NoDeploy
 )
@@ -7,6 +7,10 @@ param(
 $ErrorActionPreference = "Stop"
 
 $Root = $PSScriptRoot
+if ([string]::IsNullOrWhiteSpace($Target)) {
+    $Target = Join-Path (Split-Path -Parent $Root) "MO2\mods\OSF Seduce"
+}
+
 $Compiler = "C:\Program Files (x86)\Steam\steamapps\common\Starfield\Tools\Papyrus Compiler\PapyrusCompiler.exe"
 $Flags = "C:\Modding\Starfield\PapyrusSource\Starfield_Papyrus_Flags.flg"
 $Imports = @(
