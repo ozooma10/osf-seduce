@@ -134,3 +134,18 @@ Function ShowConfig()
     Debug.Notification("Affinity reward: " + (SeduceChangeAffinityGlobal.GetValue() as int) + " (amount " + (SeduceAffinityIncreaseGlobal.GetValue() as int) + ")")
     Debug.Notification("Anger reduction: " + (SeduceChangeAngerLevelGlobal.GetValue() as int) + " (amount " + (SeduceAngerLevelDecreaseGlobal.GetValue() as int) + ")")
 EndFunction
+
+; ---------------------------------------------------------------------------
+; Debug helpers -- the OSF analog of SAF's version/force-update terminal. OSF
+; has no save-version migration; the useful dev actions are rescanning packs
+; (after editing pack JSON) and reporting the framework version.
+; ---------------------------------------------------------------------------
+
+; Rescan Data/OSF packs (picks up edited *.osf.json without a game restart).
+Function ReloadPacks()
+    OSFSeduce.Reload()
+EndFunction
+
+Function ShowVersion()
+    Debug.Notification("OSF framework v" + OSF.GetVersion())
+EndFunction
