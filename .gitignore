@@ -1,1 +1,14 @@
-﻿*.pex
+*.pex
+
+# Local build/deploy leftovers
+*.bak
+*.bak-*
+*.tmp
+*.log
+.private/
+private-assets-*.zip
+
+# One-off ESP inspection scripts should not ship with the public source tree.
+.esp_*.py
+.orig_*.py
+*.glb
