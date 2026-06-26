@@ -98,21 +98,6 @@ Function EaglePlayerBottom(Actor akNPC, OSFTypes:SceneOptions akOpts = None) glo
     PlayTagPlayerBottom("eagle", akNPC, akOpts)
 EndFunction
 
-; Each custom scene carries both the "custom" group tag and a per-pose tag
-; ("custom01".."custom06") in the pack, so aiIndex selects a specific one by tag
-; without naming a pack id. Use Random() / PlayTag("custom") for any custom.
-Function Custom(int aiIndex, Actor akBottom, Actor akTop, OSFTypes:SceneOptions akOpts = None) global
-    PlayTag("custom0" + aiIndex, akBottom, akTop, akOpts)
-EndFunction
-
-Function CustomPlayerTop(int aiIndex, Actor akNPC, OSFTypes:SceneOptions akOpts = None) global
-    PlayTagPlayerTop("custom0" + aiIndex, akNPC, akOpts)
-EndFunction
-
-Function CustomPlayerBottom(int aiIndex, Actor akNPC, OSFTypes:SceneOptions akOpts = None) global
-    PlayTagPlayerBottom("custom0" + aiIndex, akNPC, akOpts)
-EndFunction
-
 ; Random pick across the whole set (any paired osf-tagged definition).
 Function Random(Actor akBottom, Actor akTop, OSFTypes:SceneOptions akOpts = None) global
     string[] tags = new string[2]
