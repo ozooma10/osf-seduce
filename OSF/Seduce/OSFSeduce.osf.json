@@ -11,7 +11,7 @@
       "stages": [
         {
           "loops": 1,
-          "clips": ["OSF/Seduce/Animations/bridge01bot.glb", "OSF/Seduce/Animations/bridge01top.glb"],
+          "clips": ["OSF/Seduce/Animations/bridge01bot.af", "OSF/Seduce/Animations/bridge01top.af"],
           "sound": [
             {
               "role": "bottom", "repeat": "loop", "spec": "$seduce,{gender},moan",
@@ -25,7 +25,7 @@
         },
         {
           "loops": 3,
-          "clips": ["OSF/Seduce/Animations/bridge02bot.glb", "OSF/Seduce/Animations/bridge02top.glb"],
+          "clips": ["OSF/Seduce/Animations/bridge02bot.af", "OSF/Seduce/Animations/bridge02top.af"],
           "sound": [
             {
               "role": "bottom", "repeat": "loop", "spec": "$seduce,{gender},moan",
@@ -39,7 +39,7 @@
         },
         {
           "loops": 3,
-          "clips": ["OSF/Seduce/Animations/bridge03bot.glb", "OSF/Seduce/Animations/bridge03top.glb"],
+          "clips": ["OSF/Seduce/Animations/bridge03bot.af", "OSF/Seduce/Animations/bridge03top.af"],
           "sound": [
             {
               "role": "bottom", "repeat": "loop", "spec": "$seduce,{gender},moan",
@@ -53,7 +53,7 @@
         },
         {
           "loops": 1,
-          "clips": ["OSF/Seduce/Animations/bridge03bot.glb", "OSF/Seduce/Animations/bridge03top.glb"],
+          "clips": ["OSF/Seduce/Animations/bridge03bot.af", "OSF/Seduce/Animations/bridge03top.af"],
           "sound": [
             { "role": "bottom", "spec": "$seduce,{gender},moan",   "marks": { "loud": [0.060, 0.190, 0.280], "low": [0.620, 0.880] } },
             { "role": "bottom", "spec": "$seduce,{gender},climax", "marks": [0.320] },
