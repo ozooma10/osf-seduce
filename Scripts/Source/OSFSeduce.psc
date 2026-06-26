@@ -5,8 +5,14 @@ only chooses definitions, builds arrays for console/quest callers, and
 receives cue events for anything Papyrus-side (HUD, affinity, quest hooks).
 Moan audio needs NO code here — pack cues carry the sounds.}
 
+; Wire the policy callbacks. MUST run on every game load — static-callback
+; registration is runtime DLL state, not saved — so a quest in the ESM calls this
+; from OnInit AND Actor.OnPlayerLoadGame (see OSFSeduceManager). The reward keys on
+; the "orgasm" CUE (genuine completion, fired while the scene is still live so the
+; handle resolves participants); SCENE_END is teardown only (fires on Stop /
+; save-load too, after the slot is released, so it carries no participants).
 Function RegisterEvents() global
-    OSF.RegisterSceneCallbackStatic("OSFSeduce", "OnSceneEnd", 0, OSF.EVENT_SCENE_END())
+    OSF.RegisterSceneCallbackStatic("OSFSeduce", "OnSceneEvent", 0, OSF.EVENT_CUE() + OSF.EVENT_SCENE_END())
 EndFunction
 
 ; Pre-scene actor prep (SAF parity): drop any combat alarm and sheathe weapons
@@ -206,8 +212,27 @@ ActorValue Function AngerAV() global
     return Game.GetFormFromFile(0x0002DA12, "Starfield.esm") as ActorValue
 EndFunction
 
-Function OnSceneEnd(OSFTypes:SceneEvent akEvent) global
-    Actor[] akActors = OSF.GetSceneParticipants(akEvent.sceneHandle)
+; Single relay entry (the name registered in RegisterEvents). The DLL delivers one
+; snapshot struct per event; dispatch on eventType. Do NOT call live getters that
+; depend on the handle at SCENE_END — by then the slot is released (see OnCueOrgasm).
+Function OnSceneEvent(OSFTypes:SceneEvent akEvent) global
+    if akEvent.eventType == OSF.EVENT_CUE()
+        if akEvent.cue == "orgasm"
+            OnCueOrgasm(akEvent.sceneHandle)
+        endif
+    elseif akEvent.eventType == OSF.EVENT_SCENE_END()
+        if CfgFeedback()
+            Debug.Notification("OSF Seduce: scene ended")
+        endif
+    endif
+EndFunction
+
+; Genuine completion. The "orgasm" cue (climax stage in the pack) fires once while
+; the scene is still LIVE, so the handle still resolves participants — unlike
+; SCENE_END, which fires after ReleaseSlot, returning an empty list. Reward every
+; NPC partner (whoever isn't the player; handles NPC-top and NPC-bottom alike).
+Function OnCueOrgasm(int aiSceneHandle) global
+    Actor[] akActors = OSF.GetSceneParticipants(aiSceneHandle)
     int i = 0
     while i < akActors.Length
         Actor a = akActors[i]
@@ -216,9 +241,6 @@ Function OnSceneEnd(OSFTypes:SceneEvent akEvent) global
         endif
         i = i + 1
     endwhile
-    if CfgFeedback()
-        Debug.Notification("OSF Seduce: scene ended")
-    endif
 EndFunction
 
 Function OnSceneStart(Actor[] akActors) global
