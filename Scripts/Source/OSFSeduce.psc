@@ -1,24 +1,5 @@
 ScriptName OSFSeduce
-{OSF Seduce: consumer-content bridge for the Seduce animation set. The scene
-work (sync, staging, cue sounds, undress) lives in OSF Director; this script
-only chooses definitions and builds arrays for console/quest callers.
-Moan audio needs NO code here — pack cues carry the sounds.
 
-Stateful policy (affinity reward, runtime config, the companion terminal, cue
-callbacks) lives in OSFSeduceManager: a quest INSTANCE can hold filled
-Properties / GlobalVariables that these GLOBAL functions cannot, and it owns
-the cue callback registration. Keep this file free of saved state and ESM-form
-lookups.
-
-Per-start overrides (strip/lock/fade/loop-length) ride an OSFTypes:SceneOptions
-that callers pass in (akOpts). These globals stay stateless — they never READ
-the config; a stateful caller (a dialogue fragment via
-OSFSeduceManager.OptsFromQuest, or the manager itself) builds the struct and
-hands it down. akOpts = None means "no overrides" (the console/test paths).}
-
-; The ordered actor list every play path shares: slot 0 is the
-; bottom, slot 1 is the top. The pack assigns gender slots and its "voice": false
-; key (the silent top) by this order, so it must stay fixed across callers.
 Actor[] Function SceneActors(Actor akBottom, Actor akTop) global
     Actor[] actors = new Actor[2]
     actors[0] = akBottom
@@ -27,8 +8,7 @@ Actor[] Function SceneActors(Actor akBottom, Actor akTop) global
 EndFunction
 
 ; --- explicit id play (escape hatch) -----------------------------------------
-; Plays one specific animation by its pack id. This DOES couple the caller to a
-; particular pack's ids; prefer the tag helpers below for pack-agnostic content.
+; Plays one specific animation by its pack id. This DOES couple the caller to a particular pack's ids; prefer the tag helpers below for pack-agnostic content.
 Function Play(string asId, Actor akBottom, Actor akTop, OSFTypes:SceneOptions akOpts = None) global
     bool ok = OSF.StartScene(SceneActors(akBottom, akTop), asId, akOpts)
     Debug.Trace("OSFSeduce.Play: " + asId + " -> " + ok)
@@ -43,9 +23,7 @@ Function PlayPlayerBottom(string asId, Actor akNPC, OSFTypes:SceneOptions akOpts
 EndFunction
 
 ; --- tag play (pack-agnostic; preferred) -------------------------------------
-; Picks a random installed scene carrying ALL of osf + seduce + asSubTag, so the
-; caller binds to a CONCEPT (the pose) rather than one pack's animation id. Any
-; pack that tags a scene to match can satisfy these.
+; Picks a random installed scene carrying ALL of asSubTag. Any pack that tags a scene to match can satisfy these.
 Function PlayTag(string asSubTag, Actor akBottom, Actor akTop, OSFTypes:SceneOptions akOpts = None) global
     string[] tags = new string[1]
     tags[0] = asSubTag
