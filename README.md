@@ -4,7 +4,7 @@ OSF Seduce is a Starfield port of the **SAF/NAF Seduce** mod by **Gray User**, r
 
 The mod requires:
 
-- OSF Animation
+- OSF Animation (https://github.com/ozooma10/osf-animation)
 
 ## Build
 
