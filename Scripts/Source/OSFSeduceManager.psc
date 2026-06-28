@@ -20,9 +20,6 @@ GlobalVariable Property SeduceLoopScale Auto         ; scene length multiplier (
 ActorValue Property COM_Affinity Auto
 ActorValue Property COM_AngerLevel Auto
 
-; HUD notifications on scene start/end.
-bool Property CfgFeedback = true Auto
-
 ; ---------------------------------------------------------------------------
 ; Lifecycle
 ; ---------------------------------------------------------------------------
@@ -58,9 +55,7 @@ Function OnSceneEvent(OSFTypes:SceneEvent akEvent)
             OnCueOrgasm(akEvent.sceneHandle)
         endif
     elseif akEvent.eventType == OSF.EVENT_SCENE_END()
-        if CfgFeedback
-            Debug.Notification("OSF Seduce: scene ended")
-        endif
+        ; scene ended
     elseif akEvent.eventType == OSF.EVENT_SCENE_BEGIN()
         ; scene started
     endif
