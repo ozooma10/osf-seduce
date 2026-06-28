@@ -1,7 +1,6 @@
 {
   "schema": 1,
   "name": "OSF Seduce Animations",
-  "camera": "thirdperson_hold",
   "roles": [ { "name": "bottom" }, { "name": "top", "equip": {"male": "Robert S Body Replacer.esm|0x804", "female": "Dick.esm|0x81D"} } ],
   "scenes": [
     {
