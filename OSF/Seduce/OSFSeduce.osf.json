@@ -15,11 +15,11 @@
           "sound": [
             {
               "role": "bottom", "repeat": "loop", "spec": "$seduce,{gender},moan",
-              "marks": { "med": [0.013, 0.200, 0.370], "low": [0.540, 0.673, 0.798] }
+              "at": { "med": [0.013, 0.200, 0.370], "low": [0.540, 0.673, 0.798] }
             },
             {
               "role": "top", "repeat": "loop", "spec": "$seduce,{gender},moan",
-              "marks": { "low": [0.106, 0.285, 0.610, 0.735, 0.860], "med": [0.455] }
+              "at": { "low": [0.106, 0.285, 0.610, 0.735, 0.860], "med": [0.455] }
             }
           ]
         },
@@ -29,11 +29,11 @@
           "sound": [
             {
               "role": "bottom", "repeat": "loop", "spec": "$seduce,{gender},moan",
-              "marks": { "low": [0.031, 0.156, 0.281, 0.406, 0.516, 0.782], "loud": [0.616, 0.699, 0.897] }
+              "at": { "low": [0.031, 0.156, 0.281, 0.406, 0.516, 0.782], "loud": [0.616, 0.699, 0.897] }
             },
             {
               "role": "top", "repeat": "loop", "spec": "$seduce,{gender},moan",
-              "marks": { "low": [0.094, 0.219, 0.344, 0.466, 0.566, 0.960], "loud": [0.658, 0.741, 0.832] }
+              "at": { "low": [0.094, 0.219, 0.344, 0.466, 0.566, 0.960], "loud": [0.658, 0.741, 0.832] }
             }
           ]
         },
@@ -43,11 +43,11 @@
           "sound": [
             {
               "role": "bottom", "repeat": "loop", "spec": "$seduce,{gender},moan",
-              "marks": { "loud": [0.050, 0.200, 0.325, 0.475, 0.575, 0.700, 0.838, 0.963] }
+              "at": { "loud": [0.050, 0.200, 0.325, 0.475, 0.575, 0.700, 0.838, 0.963] }
             },
             {
               "role": "top", "repeat": "loop", "spec": "$seduce,{gender},moan",
-              "marks": { "loud": [0.100, 0.250, 0.525, 0.650, 0.888], "med": [0.375, 0.750] }
+              "at": { "loud": [0.100, 0.250, 0.525, 0.650, 0.888], "med": [0.375, 0.750] }
             }
           ]
         },
@@ -55,10 +55,10 @@
           "loops": 1,
           "clips": ["OSF/Seduce/Animations/bridge03bot.af", "OSF/Seduce/Animations/bridge03top.af"],
           "sound": [
-            { "role": "bottom", "spec": "$seduce,{gender},moan",   "marks": { "loud": [0.060, 0.190, 0.280], "low": [0.620, 0.880] } },
-            { "role": "bottom", "spec": "$seduce,{gender},climax", "marks": [0.320] },
-            { "role": "top",    "spec": "$seduce,{gender},moan",   "marks": { "loud": [0.130, 0.240], "low": [0.750] } },
-            { "role": "top",    "spec": "$seduce,{gender},climax", "marks": [0.350] }
+            { "role": "bottom", "spec": "$seduce,{gender},moan",   "at": { "loud": [0.060, 0.190, 0.280], "low": [0.620, 0.880] } },
+            { "role": "bottom", "spec": "$seduce,{gender},climax", "at": [0.320] },
+            { "role": "top",    "spec": "$seduce,{gender},moan",   "at": { "loud": [0.130, 0.240], "low": [0.750] } },
+            { "role": "top",    "spec": "$seduce,{gender},climax", "at": [0.350] }
           ],
           "cue": [ { "at": "exit", "id": "orgasm" } ]
         }
@@ -75,11 +75,11 @@
           "sound": [
             {
               "role": "bottom", "repeat": "loop", "spec": "$seduce,{gender},moan",
-              "marks": { "med": [0.040, 0.225, 0.410], "low": [0.560, 0.700, 0.840] }
+              "at": { "med": [0.040, 0.225, 0.410], "low": [0.560, 0.700, 0.840] }
             },
             {
               "role": "top", "repeat": "loop", "spec": "$seduce,{gender},moan",
-              "marks": { "low": [0.120, 0.300, 0.620, 0.760, 0.900], "med": [0.470] }
+              "at": { "low": [0.120, 0.300, 0.620, 0.760, 0.900], "med": [0.470] }
             }
           ]
         },
@@ -89,11 +89,11 @@
           "sound": [
             {
               "role": "bottom", "repeat": "loop", "spec": "$seduce,{gender},moan",
-              "marks": { "low": [0.040, 0.165, 0.290, 0.415, 0.525, 0.790], "loud": [0.625, 0.710, 0.905] }
+              "at": { "low": [0.040, 0.165, 0.290, 0.415, 0.525, 0.790], "loud": [0.625, 0.710, 0.905] }
             },
             {
               "role": "top", "repeat": "loop", "spec": "$seduce,{gender},moan",
-              "marks": { "low": [0.100, 0.230, 0.355, 0.475, 0.575, 0.965], "loud": [0.665, 0.750, 0.840] }
+              "at": { "low": [0.100, 0.230, 0.355, 0.475, 0.575, 0.965], "loud": [0.665, 0.750, 0.840] }
             }
           ]
         },
@@ -103,11 +103,11 @@
           "sound": [
             {
               "role": "bottom", "repeat": "loop", "spec": "$seduce,{gender},moan",
-              "marks": { "loud": [0.055, 0.205, 0.330, 0.480, 0.580, 0.705, 0.840, 0.965] }
+              "at": { "loud": [0.055, 0.205, 0.330, 0.480, 0.580, 0.705, 0.840, 0.965] }
             },
             {
               "role": "top", "repeat": "loop", "spec": "$seduce,{gender},moan",
-              "marks": { "loud": [0.110, 0.260, 0.535, 0.660, 0.895], "med": [0.385, 0.760] }
+              "at": { "loud": [0.110, 0.260, 0.535, 0.660, 0.895], "med": [0.385, 0.760] }
             }
           ]
         },
@@ -115,10 +115,10 @@
           "loops": 1,
           "clips": ["OSF/Seduce/Animations/downdog03bot.af", "OSF/Seduce/Animations/downdog03top.af"],
           "sound": [
-            { "role": "bottom", "spec": "$seduce,{gender},moan",   "marks": { "loud": [0.065, 0.195, 0.285], "low": [0.625, 0.885] } },
-            { "role": "bottom", "spec": "$seduce,{gender},climax", "marks": [0.330] },
-            { "role": "top",    "spec": "$seduce,{gender},moan",   "marks": { "loud": [0.140, 0.250], "low": [0.760] } },
-            { "role": "top",    "spec": "$seduce,{gender},climax", "marks": [0.360] }
+            { "role": "bottom", "spec": "$seduce,{gender},moan",   "at": { "loud": [0.065, 0.195, 0.285], "low": [0.625, 0.885] } },
+            { "role": "bottom", "spec": "$seduce,{gender},climax", "at": [0.330] },
+            { "role": "top",    "spec": "$seduce,{gender},moan",   "at": { "loud": [0.140, 0.250], "low": [0.760] } },
+            { "role": "top",    "spec": "$seduce,{gender},climax", "at": [0.360] }
           ],
           "cue": [ { "at": "exit", "id": "orgasm" } ]
         }
@@ -135,11 +135,11 @@
           "sound": [
             {
               "role": "bottom", "repeat": "loop", "spec": "$seduce,{gender},moan",
-              "marks": { "med": [0.025, 0.210, 0.385], "low": [0.545, 0.685, 0.815] }
+              "at": { "med": [0.025, 0.210, 0.385], "low": [0.545, 0.685, 0.815] }
             },
             {
               "role": "top", "repeat": "loop", "spec": "$seduce,{gender},moan",
-              "marks": { "low": [0.110, 0.290, 0.600, 0.745, 0.875], "med": [0.460] }
+              "at": { "low": [0.110, 0.290, 0.600, 0.745, 0.875], "med": [0.460] }
             }
           ]
         },
@@ -149,11 +149,11 @@
           "sound": [
             {
               "role": "bottom", "repeat": "loop", "spec": "$seduce,{gender},moan",
-              "marks": { "low": [0.035, 0.160, 0.285, 0.410, 0.520, 0.785], "loud": [0.620, 0.705, 0.900] }
+              "at": { "low": [0.035, 0.160, 0.285, 0.410, 0.520, 0.785], "loud": [0.620, 0.705, 0.900] }
             },
             {
               "role": "top", "repeat": "loop", "spec": "$seduce,{gender},moan",
-              "marks": { "low": [0.098, 0.222, 0.348, 0.470, 0.570, 0.962], "loud": [0.660, 0.745, 0.835] }
+              "at": { "low": [0.098, 0.222, 0.348, 0.470, 0.570, 0.962], "loud": [0.660, 0.745, 0.835] }
             }
           ]
         },
@@ -163,11 +163,11 @@
           "sound": [
             {
               "role": "bottom", "repeat": "loop", "spec": "$seduce,{gender},moan",
-              "marks": { "loud": [0.052, 0.202, 0.327, 0.477, 0.577, 0.702, 0.840, 0.965] }
+              "at": { "loud": [0.052, 0.202, 0.327, 0.477, 0.577, 0.702, 0.840, 0.965] }
             },
             {
               "role": "top", "repeat": "loop", "spec": "$seduce,{gender},moan",
-              "marks": { "loud": [0.104, 0.254, 0.528, 0.654, 0.890], "med": [0.378, 0.752] }
+              "at": { "loud": [0.104, 0.254, 0.528, 0.654, 0.890], "med": [0.378, 0.752] }
             }
           ]
         },
@@ -175,10 +175,10 @@
           "loops": 1,
           "clips": ["OSF/Seduce/Animations/eagle03bot.af", "OSF/Seduce/Animations/eagle03top.af"],
           "sound": [
-            { "role": "bottom", "spec": "$seduce,{gender},moan",   "marks": { "loud": [0.062, 0.192, 0.282], "low": [0.622, 0.882] } },
-            { "role": "bottom", "spec": "$seduce,{gender},climax", "marks": [0.325] },
-            { "role": "top",    "spec": "$seduce,{gender},moan",   "marks": { "loud": [0.132, 0.242], "low": [0.752] } },
-            { "role": "top",    "spec": "$seduce,{gender},climax", "marks": [0.355] }
+            { "role": "bottom", "spec": "$seduce,{gender},moan",   "at": { "loud": [0.062, 0.192, 0.282], "low": [0.622, 0.882] } },
+            { "role": "bottom", "spec": "$seduce,{gender},climax", "at": [0.325] },
+            { "role": "top",    "spec": "$seduce,{gender},moan",   "at": { "loud": [0.132, 0.242], "low": [0.752] } },
+            { "role": "top",    "spec": "$seduce,{gender},climax", "at": [0.355] }
           ],
           "cue": [ { "at": "exit", "id": "orgasm" } ]
         }
