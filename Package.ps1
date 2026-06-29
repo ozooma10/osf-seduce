@@ -31,8 +31,8 @@ $stage = Join-Path ([System.IO.Path]::GetTempPath()) ("osfseduce_pkg_" + [guid]:
 New-Item -ItemType Directory -Force -Path $stage | Out-Null
 
 try {
-    # Top-level ESP.
-    Copy-Item -LiteralPath (Join-Path $Root "OSFSeduce.esp") -Destination $stage -Force
+    # Top-level ESM (master-flagged; safe to leave in a save's load order).
+    Copy-Item -LiteralPath (Join-Path $Root "OSFSeduce.esm") -Destination $stage -Force
 
     # Asset trees that ship verbatim.
     foreach ($dir in @("OSF", "Sound")) {

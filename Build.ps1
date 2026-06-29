@@ -76,7 +76,7 @@ if (!$NoDeploy) {
     New-Item -ItemType Directory -Force -Path $Target | Out-Null
 
     @(
-        "OSFSeduce.esp",
+        "OSFSeduce.esm",
         "meta.ini",
         "OSF",
         "Scripts",

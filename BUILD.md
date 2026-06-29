@@ -22,7 +22,7 @@ Useful variants:
 
 Deployment copies:
 
-- `OSFSeduce.esp`
+- `OSFSeduce.esm`
 - `meta.ini`
 - `Scripts`
 - `OSF`
