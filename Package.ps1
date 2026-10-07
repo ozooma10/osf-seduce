@@ -61,5 +61,14 @@ try {
     Write-Host "Packaged: $archive ($size)"
 }
 finally {
-    Remove-Item -LiteralPath $stage -Recurse -Force -ErrorAction SilentlyContinue
+    if (Test-Path -LiteralPath $stage) {
+        $cleanupStage = Get-Item -LiteralPath (Resolve-Path -LiteralPath $stage).ProviderPath
+        $cleanupRoot = (Resolve-Path -LiteralPath ([System.IO.Path]::GetTempPath())).ProviderPath.TrimEnd('\')
+        if (!$cleanupStage.PSIsContainer -or $cleanupStage.Parent.FullName -ne $cleanupRoot -or
+            $cleanupStage.Name -notmatch '^osfseduce_pkg_[0-9a-f]{32}$' -or
+            ($cleanupStage.Attributes -band [System.IO.FileAttributes]::ReparsePoint)) {
+            throw "Refusing to clean unexpected staging path: $stage"
+        }
+        Remove-Item -LiteralPath $cleanupStage.FullName -Recurse -Force
+    }
 }
