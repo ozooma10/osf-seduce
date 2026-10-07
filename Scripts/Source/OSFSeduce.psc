@@ -1,5 +1,18 @@
 ScriptName OSFSeduce
 
+; Recheck at scene start because console/script callers bypass dialogue conditions.
+bool Function AreAdultActors(Actor akBottom, Actor akTop) global
+    if !akBottom || !akTop
+        Debug.Trace("OSFSeduce: scene rejected - missing actor")
+        return false
+    endif
+    if akBottom.IsChild() || akTop.IsChild()
+        Debug.Trace("OSFSeduce: scene rejected - child participant")
+        return false
+    endif
+    return true
+EndFunction
+
 Actor[] Function SceneActors(Actor akBottom, Actor akTop) global
     Actor[] actors = new Actor[2]
     actors[0] = akBottom
@@ -10,6 +23,9 @@ EndFunction
 ; --- explicit id play (escape hatch) -----------------------------------------
 ; Plays one specific animation by its pack id. This DOES couple the caller to a particular pack's ids; prefer the tag helpers below for pack-agnostic content.
 Function Play(string asId, Actor akBottom, Actor akTop, OSFTypes:SceneOptions akOpts = None) global
+    if !AreAdultActors(akBottom, akTop)
+        return
+    endif
     bool ok = OSF.StartScene(SceneActors(akBottom, akTop), asId, akOpts)
     Debug.Trace("OSFSeduce.Play: " + asId + " -> " + ok)
 EndFunction
@@ -25,6 +41,9 @@ EndFunction
 ; --- tag play (pack-agnostic; preferred) -------------------------------------
 ; Picks a random installed scene carrying ALL of asSubTag. Any pack that tags a scene to match can satisfy these.
 Function PlayTag(string asSubTag, Actor akBottom, Actor akTop, OSFTypes:SceneOptions akOpts = None) global
+    if !AreAdultActors(akBottom, akTop)
+        return
+    endif
     string[] tags = new string[1]
     tags[0] = asSubTag
     string id = OSF.StartSceneByTags(SceneActors(akBottom, akTop), tags, akOpts)
@@ -78,6 +97,9 @@ EndFunction
 
 ; Random pick across the whole set (any paired osf-tagged definition).
 Function Random(Actor akBottom, Actor akTop, OSFTypes:SceneOptions akOpts = None) global
+    if !AreAdultActors(akBottom, akTop)
+        return
+    endif
     string[] tags = new string[2]
     tags[0] = "osf"
     tags[1] = "seduce"
