@@ -6,7 +6,7 @@
     {
       "id": "osf_seduce_bridge",
       "name": "Seduce Bridge",
-      "tags": ["osf", "seduce", "paired", "bridge"],
+      "tags": ["osf", "seduce", "paired", "bridge", "adult", "mf", "mm", "ff"],
       "stages": [
         {
           "loops": 1,
@@ -59,14 +59,18 @@
             { "role": "top",    "spec": "$seduce,{gender},moan",   "at": { "loud": [0.130, 0.240], "low": [0.750] } },
             { "role": "top",    "spec": "$seduce,{gender},climax", "at": [0.350] }
           ],
-          "cue": [ { "at": "exit", "id": "orgasm" } ]
+          "cue": [
+            { "at": 0.320, "id": "climax:bottom" },
+            { "at": 0.350, "id": "climax:top" },
+            { "at": "exit", "id": "orgasm" }
+          ]
         }
       ]
     },
     {
       "id": "osf_seduce_downdog",
       "name": "Seduce Down Dog",
-      "tags": ["osf", "seduce", "paired", "downdog"],
+      "tags": ["osf", "seduce", "paired", "downdog", "adult", "mf", "mm", "ff"],
       "stages": [
         {
           "loops": 1,
@@ -119,14 +123,18 @@
             { "role": "top",    "spec": "$seduce,{gender},moan",   "at": { "loud": [0.140, 0.250], "low": [0.760] } },
             { "role": "top",    "spec": "$seduce,{gender},climax", "at": [0.360] }
           ],
-          "cue": [ { "at": "exit", "id": "orgasm" } ]
+          "cue": [
+            { "at": 0.330, "id": "climax:bottom" },
+            { "at": 0.360, "id": "climax:top" },
+            { "at": "exit", "id": "orgasm" }
+          ]
         }
       ]
     },
     {
       "id": "osf_seduce_eagle",
       "name": "Seduce Eagle",
-      "tags": ["osf", "seduce", "paired", "eagle"],
+      "tags": ["osf", "seduce", "paired", "eagle", "adult", "mf", "mm", "ff"],
       "stages": [
         {
           "loops": 1,
@@ -179,7 +187,11 @@
             { "role": "top",    "spec": "$seduce,{gender},moan",   "at": { "loud": [0.132, 0.242], "low": [0.752] } },
             { "role": "top",    "spec": "$seduce,{gender},climax", "at": [0.355] }
           ],
-          "cue": [ { "at": "exit", "id": "orgasm" } ]
+          "cue": [
+            { "at": 0.325, "id": "climax:bottom" },
+            { "at": 0.355, "id": "climax:top" },
+            { "at": "exit", "id": "orgasm" }
+          ]
         }
       ]
     }
