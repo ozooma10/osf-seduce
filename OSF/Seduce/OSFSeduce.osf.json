@@ -19,6 +19,7 @@
           "stages": [
             {
               "tags": ["intensity.low"],
+              "name": "Introduction",
               "clips": ["OSF/Seduce/Animations/bridge01bot.af", "OSF/Seduce/Animations/bridge01top.af"]
             }
           ],
@@ -44,10 +45,12 @@
         },
         {
           "id": "build",
+          "allowManualHold": true,
           "loops": 3,
           "stages": [
             {
               "tags": ["intensity.medium"],
+              "name": "Steady",
               "clips": ["OSF/Seduce/Animations/bridge02bot.af", "OSF/Seduce/Animations/bridge02top.af"]
             }
           ],
@@ -73,10 +76,12 @@
         },
         {
           "id": "intense",
+          "allowManualHold": true,
           "loops": 3,
           "stages": [
             {
               "tags": ["intensity.high"],
+              "name": "Intense",
               "clips": ["OSF/Seduce/Animations/bridge03bot.af", "OSF/Seduce/Animations/bridge03top.af"]
             }
           ],
@@ -106,6 +111,7 @@
           "stages": [
             {
               "tags": ["intensity.high"],
+              "name": "Finishing",
               "clips": ["OSF/Seduce/Animations/bridge03bot.af", "OSF/Seduce/Animations/bridge03top.af"]
             }
           ],
