@@ -5,6 +5,8 @@ OSF Seduce is a Starfield port of the **SAF/NAF Seduce** mod by **Gray User**, r
 The mod requires:
 
 - OSF Animation (https://github.com/ozooma10/osf-animation)
+- OSF Intimacy, the adult encounter layer over OSF Animation. Seduce starts its scenes as OSF Intimacy
+  encounters and rewards companions on their climax events.
 
 ## Build
 

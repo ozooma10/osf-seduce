@@ -61,8 +61,7 @@
           ],
           "cue": [
             { "at": 0.320, "id": "climax", "role": "bottom" },
-            { "at": 0.350, "id": "climax", "role": "top" },
-            { "at": "exit", "id": "orgasm" }
+            { "at": 0.350, "id": "climax", "role": "top" }
           ]
         }
       ]
@@ -125,8 +124,7 @@
           ],
           "cue": [
             { "at": 0.330, "id": "climax", "role": "bottom" },
-            { "at": 0.360, "id": "climax", "role": "top" },
-            { "at": "exit", "id": "orgasm" }
+            { "at": 0.360, "id": "climax", "role": "top" }
           ]
         }
       ]
@@ -189,8 +187,7 @@
           ],
           "cue": [
             { "at": 0.325, "id": "climax", "role": "bottom" },
-            { "at": 0.355, "id": "climax", "role": "top" },
-            { "at": "exit", "id": "orgasm" }
+            { "at": 0.355, "id": "climax", "role": "top" }
           ]
         }
       ]

@@ -16,6 +16,7 @@ $Flags = "C:\Modding\Starfield\PapyrusSource\Starfield_Papyrus_Flags.flg"
 $Imports = @(
     (Join-Path $Root "Scripts\Source"),
     "C:\Modding\Starfield\OSF Animation\dist\Scripts\Source",
+    "C:\Modding\Starfield\OSF Intimacy\Scripts\Source",
     "C:\Modding\Starfield\PapyrusSource"
 ) -join ";"
 $ScriptOutput = Join-Path $Root "Scripts"

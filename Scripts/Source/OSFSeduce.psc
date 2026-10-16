@@ -20,14 +20,46 @@ Actor[] Function SceneActors(Actor akBottom, Actor akTop) global
     return actors
 EndFunction
 
+; --- OSF Intimacy ---------------------------------------------------------------
+; Scenes start as OSF Intimacy encounters owned by Seduce, so OSFSeduceManager hears only its own
+; climax events. Intimacy also checks eligibility (adult, alive, loaded, not in combat or another scene).
+
+string Function Owner() global
+    return "OSFSeduce"
+EndFunction
+
+; The top actor is preferred onto the "top" role; the terminal's strip and length settings carry over.
+OSFIntimacyTypes:EncounterRequest Function NewRequest(Actor akTop, OSFTypes:SceneOptions akOpts) global
+    OSFIntimacyTypes:EncounterRequest req = new OSFIntimacyTypes:EncounterRequest
+    req.Owner = Owner()
+    req.PreferActor = akTop
+    req.PreferRole = "top"
+    if akOpts
+        req.StripMode = akOpts.StripMode
+        req.LengthScale = akOpts.LoopScale
+    endif
+    return req
+EndFunction
+
+int Function StartEncounter(Actor akBottom, Actor akTop, OSFIntimacyTypes:EncounterRequest akRequest, string asWhat) global
+    int handle = OSFIntimacy.StartEncounter(SceneActors(akBottom, akTop), akRequest)
+    if handle > 0
+        Debug.Trace("OSFSeduce." + asWhat + ": encounter " + handle)
+    else
+        Debug.Trace("OSFSeduce." + asWhat + ": " + OSFIntimacy.RefusalName(handle) + " - " + OSFIntimacy.GetLastRefusal(Owner()))
+    endif
+    return handle
+EndFunction
+
 ; --- explicit id play (escape hatch) -----------------------------------------
 ; Plays one specific animation by its pack id. This DOES couple the caller to a particular pack's ids; prefer the tag helpers below for pack-agnostic content.
 Function Play(string asId, Actor akBottom, Actor akTop, OSFTypes:SceneOptions akOpts = None) global
     if !AreAdultActors(akBottom, akTop)
         return
     endif
-    bool ok = OSF.StartScene(SceneActors(akBottom, akTop), asId, akOpts)
-    Debug.Trace("OSFSeduce.Play: " + asId + " -> " + ok)
+    OSFIntimacyTypes:EncounterRequest req = NewRequest(akTop, akOpts)
+    req.SceneId = asId
+    StartEncounter(akBottom, akTop, req, "Play " + asId)
 EndFunction
 
 Function PlayPlayerTop(string asId, Actor akNPC, OSFTypes:SceneOptions akOpts = None) global
@@ -39,15 +71,15 @@ Function PlayPlayerBottom(string asId, Actor akNPC, OSFTypes:SceneOptions akOpts
 EndFunction
 
 ; --- tag play (pack-agnostic; preferred) -------------------------------------
-; Picks a random installed scene carrying ALL of asSubTag. Any pack that tags a scene to match can satisfy these.
+; Picks a random installed scene carrying asSubTag (plus OSF Intimacy's adult and composition tags).
+; Any pack that tags a scene to match can satisfy these.
 Function PlayTag(string asSubTag, Actor akBottom, Actor akTop, OSFTypes:SceneOptions akOpts = None) global
     if !AreAdultActors(akBottom, akTop)
         return
     endif
-    string[] tags = new string[1]
-    tags[0] = asSubTag
-    string id = OSF.StartSceneByTags(SceneActors(akBottom, akTop), tags, akOpts)
-    Debug.Trace("OSFSeduce.PlayTag: " + asSubTag + " -> " + id)
+    OSFIntimacyTypes:EncounterRequest req = NewRequest(akTop, akOpts)
+    req.Tags = asSubTag
+    StartEncounter(akBottom, akTop, req, "PlayTag " + asSubTag)
 EndFunction
 
 Function PlayTagPlayerTop(string asSubTag, Actor akNPC, OSFTypes:SceneOptions akOpts = None) global
@@ -100,11 +132,9 @@ Function Random(Actor akBottom, Actor akTop, OSFTypes:SceneOptions akOpts = None
     if !AreAdultActors(akBottom, akTop)
         return
     endif
-    string[] tags = new string[2]
-    tags[0] = "osf"
-    tags[1] = "seduce"
-    string id = OSF.StartSceneByTags(SceneActors(akBottom, akTop), tags, akOpts)
-    Debug.Trace("OSFSeduce.Random -> " + id)
+    OSFIntimacyTypes:EncounterRequest req = NewRequest(akTop, akOpts)
+    req.Tags = "osf,seduce"
+    StartEncounter(akBottom, akTop, req, "Random")
 EndFunction
 
 Function RandomPlayerTop(Actor akNPC, OSFTypes:SceneOptions akOpts = None) global
@@ -120,8 +150,15 @@ Function Stage(Actor akActor, int aiStage) global
     Debug.Trace("OSFSeduce.Stage: " + aiStage + " -> " + ok)
 EndFunction
 
+; Stops the actor's encounter; falls back to any OSF scene the actor is in.
 Function Stop(Actor akActor) global
-    bool ok = OSF.StopSceneForActor(akActor)
+    int encounter = OSFIntimacy.GetEncounterForActor(akActor)
+    bool ok
+    if encounter > 0
+        ok = OSFIntimacy.StopEncounter(encounter)
+    else
+        ok = OSF.StopSceneForActor(akActor)
+    endif
     Debug.Trace("OSFSeduce.Stop: " + ok)
 EndFunction
 

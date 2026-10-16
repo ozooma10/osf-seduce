@@ -1,14 +1,14 @@
 Scriptname OSFSeduceManager extends Quest
 
-; --- OSF callback receiver token (so we can cleanly re-register on load) ----------
-int iCueToken = 0
+; --- OSF Intimacy callback token (so we can cleanly re-register on load) ---------
+int iEncounterToken = 0
 
 ; --- config: runtime-editable via the companion terminal ----------------------
 ; Defaults mirror SAF Seduce's shipped values. Set the GlobalVariable record defaults in CK to match (affinity 25.0, anger 5.0).
 GlobalVariable Property SeduceChangeAffinityGlobal Auto      ; 0/1 -- apply affinity reward?
-GlobalVariable Property SeduceAffinityIncreaseGlobal Auto    ; affinity added per finished scene
+GlobalVariable Property SeduceAffinityIncreaseGlobal Auto    ; affinity added per partner climax
 GlobalVariable Property SeduceChangeAngerLevelGlobal Auto    ; 0/1 -- apply anger reduction?
-GlobalVariable Property SeduceAngerLevelDecreaseGlobal Auto  ; anger subtracted per finished scene
+GlobalVariable Property SeduceAngerLevelDecreaseGlobal Auto  ; anger subtracted per partner climax
 
 ; --- per-start scene overrides (fed to OSFTypes:SceneOptions at scene start) ----
 ; Tri-states store the OSF convention: -1 inherit the pack default, 0 force OFF, 1 force ON.
@@ -38,38 +38,42 @@ Event Actor.OnPlayerLoadGame(Actor akSender)
 EndEvent
 
 ; Register THIS instance (not the global library) so the handler can hold state.
-; Release any prior token first so a re-register doesn't stack duplicate relays.
+; Only Seduce's own encounters are delivered (OSF Intimacy filters by owner). Release any prior
+; token first so a re-register doesn't stack duplicate relays.
 Function RegisterCallbacks()
-    if iCueToken
-        OSF.UnregisterSceneCallback(iCueToken)
+    if iEncounterToken
+        OSFIntimacy.UnregisterEncounterCallback(iEncounterToken)
     endif
-    iCueToken = OSF.RegisterSceneCallback(self, "OnSceneEvent", 0, OSF.EVENT_CUE() + OSF.EVENT_SCENE_END() + OSF.EVENT_SCENE_BEGIN())
+    iEncounterToken = OSFIntimacy.RegisterEncounterCallback(self, "OnEncounterEvent", OSFSeduce.Owner(), OSFIntimacy.EVENT_CLIMAX())
+    if !iEncounterToken
+        Debug.Trace("OSFSeduce: could not register for OSF Intimacy events; is OSF Intimacy installed?")
+    endif
 EndFunction
 
 ; ---------------------------------------------------------------------------
 ; Policy layer (instance methods -- can read Properties / GlobalVariables)
 ; ---------------------------------------------------------------------------
-Function OnSceneEvent(OSFTypes:SceneEvent akEvent)
-    if akEvent.eventType == OSF.EVENT_CUE()
-        if akEvent.cue == "orgasm"
-            OnCueOrgasm(akEvent.sceneHandle)
-        endif
-    elseif akEvent.eventType == OSF.EVENT_SCENE_END()
-        ; scene ended
-    elseif akEvent.eventType == OSF.EVENT_SCENE_BEGIN()
-        ; scene started
-    endif
-EndFunction
 
-Function OnCueOrgasm(int aiSceneHandle)
-    Actor[] akActors = OSF.GetSceneParticipants(aiSceneHandle)
-    int i = 0
-    while i < akActors.Length
-        Actor a = akActors[i]
-        if a && a != Game.GetPlayer()
-            ApplyRelationshipReward(a)
+; A partner climaxed. Content names the role on its climax cue, so ActorRef is that participant;
+; content without one rewards every non-player participant once per climax.
+Function OnEncounterEvent(OSFIntimacyTypes:EncounterEvent akEvent)
+    if akEvent.Type != OSFIntimacy.EVENT_CLIMAX()
+        return
+    endif
+    Actor player = Game.GetPlayer()
+    if akEvent.ActorRef
+        if akEvent.ActorRef != player
+            ApplyRelationshipReward(akEvent.ActorRef)
         endif
-        i = i + 1
+        return
+    endif
+    Actor[] cast = OSFIntimacy.GetEncounterCast(akEvent.Encounter)
+    int i = 0
+    while i < cast.Length
+        if cast[i] && cast[i] != player
+            ApplyRelationshipReward(cast[i])
+        endif
+        i += 1
     endwhile
 EndFunction
 
