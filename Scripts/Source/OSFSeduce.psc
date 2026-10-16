@@ -62,6 +62,8 @@ Function Play(string asId, Actor akBottom, Actor akTop, OSFTypes:SceneOptions ak
     if asId == "osf_seduce_bridge"
         req.Progression = OSFIntimacy.PROGRESSION_MANUAL() ; interactive manual; auto fallback when OSF UI is unavailable
         req.Control = OSFIntimacy.CONTROL_PLAYER()
+        req.Tags = "seduce,paired"
+        req.Activities = "osf_seduce_bridge,osf_seduce_downdog"
     endif
     StartEncounter(akBottom, akTop, req, "Play " + asId)
 EndFunction
@@ -84,8 +86,11 @@ Function PlayTag(string asSubTag, Actor akBottom, Actor akTop, OSFTypes:SceneOpt
     OSFIntimacyTypes:EncounterRequest req = NewRequest(akTop, akOpts)
     req.Tags = asSubTag
     if asSubTag == "bridge"
+        req.InitialTags = asSubTag
         req.Progression = OSFIntimacy.PROGRESSION_MANUAL() ; interactive manual; auto fallback when OSF UI is unavailable
         req.Control = OSFIntimacy.CONTROL_PLAYER()
+        req.Tags = "seduce,paired"
+        req.Activities = "osf_seduce_bridge,osf_seduce_downdog"
     endif
     StartEncounter(akBottom, akTop, req, "PlayTag " + asSubTag)
 EndFunction
