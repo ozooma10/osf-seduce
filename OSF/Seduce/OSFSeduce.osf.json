@@ -10,6 +10,7 @@
       "stages": [
         {
           "loops": 1,
+          "tags": ["intensity.low"],
           "clips": ["OSF/Seduce/Animations/bridge01bot.af", "OSF/Seduce/Animations/bridge01top.af"],
           "sound": [
             {
@@ -24,6 +25,7 @@
         },
         {
           "loops": 3,
+          "tags": ["intensity.medium"],
           "clips": ["OSF/Seduce/Animations/bridge02bot.af", "OSF/Seduce/Animations/bridge02top.af"],
           "sound": [
             {
@@ -38,6 +40,7 @@
         },
         {
           "loops": 3,
+          "tags": ["intensity.high"],
           "clips": ["OSF/Seduce/Animations/bridge03bot.af", "OSF/Seduce/Animations/bridge03top.af"],
           "sound": [
             {
@@ -52,6 +55,7 @@
         },
         {
           "loops": 1,
+          "tags": ["intensity.high"],
           "clips": ["OSF/Seduce/Animations/bridge03bot.af", "OSF/Seduce/Animations/bridge03top.af"],
           "sound": [
             { "role": "bottom", "spec": "$seduce,{gender},moan",   "at": { "loud": [0.060, 0.190, 0.280], "low": [0.620, 0.880] } },
@@ -73,6 +77,7 @@
       "stages": [
         {
           "loops": 1,
+          "tags": ["intensity.low"],
           "clips": ["OSF/Seduce/Animations/downdog01bot.af", "OSF/Seduce/Animations/downdog01top.af"],
           "sound": [
             {
@@ -87,6 +92,7 @@
         },
         {
           "loops": 3,
+          "tags": ["intensity.medium"],
           "clips": ["OSF/Seduce/Animations/downdog02bot.af", "OSF/Seduce/Animations/downdog02top.af"],
           "sound": [
             {
@@ -101,6 +107,7 @@
         },
         {
           "loops": 3,
+          "tags": ["intensity.high"],
           "clips": ["OSF/Seduce/Animations/downdog03bot.af", "OSF/Seduce/Animations/downdog03top.af"],
           "sound": [
             {
@@ -115,6 +122,7 @@
         },
         {
           "loops": 1,
+          "tags": ["intensity.high"],
           "clips": ["OSF/Seduce/Animations/downdog03bot.af", "OSF/Seduce/Animations/downdog03top.af"],
           "sound": [
             { "role": "bottom", "spec": "$seduce,{gender},moan",   "at": { "loud": [0.065, 0.195, 0.285], "low": [0.625, 0.885] } },
@@ -136,6 +144,7 @@
       "stages": [
         {
           "loops": 1,
+          "tags": ["intensity.low"],
           "clips": ["OSF/Seduce/Animations/eagle01bot.af", "OSF/Seduce/Animations/eagle01top.af"],
           "sound": [
             {
@@ -150,6 +159,7 @@
         },
         {
           "loops": 3,
+          "tags": ["intensity.medium"],
           "clips": ["OSF/Seduce/Animations/eagle02bot.af", "OSF/Seduce/Animations/eagle02top.af"],
           "sound": [
             {
@@ -164,6 +174,7 @@
         },
         {
           "loops": 3,
+          "tags": ["intensity.high"],
           "clips": ["OSF/Seduce/Animations/eagle03bot.af", "OSF/Seduce/Animations/eagle03top.af"],
           "sound": [
             {
@@ -178,6 +189,7 @@
         },
         {
           "loops": 1,
+          "tags": ["intensity.high"],
           "clips": ["OSF/Seduce/Animations/eagle03bot.af", "OSF/Seduce/Animations/eagle03top.af"],
           "sound": [
             { "role": "bottom", "spec": "$seduce,{gender},moan",   "at": { "loud": [0.062, 0.192, 0.282], "low": [0.622, 0.882] } },
