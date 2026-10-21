@@ -9,38 +9,143 @@
     {
       "id": "osf_seduce_bridge",
       "name": "Seduce Bridge",
-      "tags": ["osf", "seduce", "paired", "bridge", "adult", "mf", "mm", "ff"],
+      "tags": [
+        "osf",
+        "seduce",
+        "paired",
+        "bridge",
+        "adult",
+        "mf",
+        "mm",
+        "ff"
+      ],
       "entry": "intro",
-      "linearStages": ["intro", "build", "intense", "climax"],
+      "linearStages": [
+        "intro",
+        "build",
+        "intense",
+        "climax"
+      ],
       "nodes": [
         {
           "id": "intro",
           "loops": 1,
           "stages": [
             {
-              "tags": ["intensity.low"],
+              "tags": [
+                "intensity.low"
+              ],
               "name": "Introduction",
-              "clips": ["OSF/Seduce/Animations/bridge01bot.af", "OSF/Seduce/Animations/bridge01top.af"]
-            }
-          ],
-          "sound": [
-            {
-              "role": "bottom",
-              "repeat": "loop",
-              "spec": "$seduce,{gender},moan",
-              "at": {"med": [0.013, 0.2, 0.37], "low": [0.54, 0.673, 0.798]}
-            },
-            {
-              "role": "top",
-              "repeat": "loop",
-              "spec": "$seduce,{gender},moan",
-              "at": {"low": [0.106, 0.285, 0.61, 0.735, 0.86], "med": [0.455]}
+              "clips": [
+                "OSF/Seduce/Animations/bridge01bot.af",
+                "OSF/Seduce/Animations/bridge01top.af"
+              ]
             }
           ],
           "edges": [
-            {"to": "build", "when": "loops"},
-            {"id": "next", "label": "Continue", "to": "build", "when": "advance", "default": true},
-            {"id": "climax", "label": "Finish", "to": "climax", "when": "advance"}
+            {
+              "to": "build",
+              "when": "loops"
+            },
+            {
+              "id": "next",
+              "label": "Continue",
+              "to": "build",
+              "when": "advance",
+              "default": true
+            },
+            {
+              "id": "climax",
+              "label": "Finish",
+              "to": "climax",
+              "when": "advance"
+            }
+          ],
+          "cue": [
+            {
+              "at": 0.013,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.106,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.2,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.285,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.37,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.455,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.54,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.61,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.673,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.735,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.798,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.86,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            }
           ]
         },
         {
@@ -49,29 +154,162 @@
           "loops": 3,
           "stages": [
             {
-              "tags": ["intensity.medium"],
+              "tags": [
+                "intensity.medium"
+              ],
               "name": "Steady",
-              "clips": ["OSF/Seduce/Animations/bridge02bot.af", "OSF/Seduce/Animations/bridge02top.af"]
-            }
-          ],
-          "sound": [
-            {
-              "role": "bottom",
-              "repeat": "loop",
-              "spec": "$seduce,{gender},moan",
-              "at": {"low": [0.031, 0.156, 0.281, 0.406, 0.516, 0.782], "loud": [0.616, 0.699, 0.897]}
-            },
-            {
-              "role": "top",
-              "repeat": "loop",
-              "spec": "$seduce,{gender},moan",
-              "at": {"low": [0.094, 0.219, 0.344, 0.466, 0.566, 0.96], "loud": [0.658, 0.741, 0.832]}
+              "clips": [
+                "OSF/Seduce/Animations/bridge02bot.af",
+                "OSF/Seduce/Animations/bridge02top.af"
+              ]
             }
           ],
           "edges": [
-            {"to": "intense", "when": "loops"},
-            {"id": "next", "label": "Continue", "to": "intense", "when": "advance", "default": true},
-            {"id": "climax", "label": "Finish", "to": "climax", "when": "advance"}
+            {
+              "to": "intense",
+              "when": "loops"
+            },
+            {
+              "id": "next",
+              "label": "Continue",
+              "to": "intense",
+              "when": "advance",
+              "default": true
+            },
+            {
+              "id": "climax",
+              "label": "Finish",
+              "to": "climax",
+              "when": "advance"
+            }
+          ],
+          "cue": [
+            {
+              "at": 0.031,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.094,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.156,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.219,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.281,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.344,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.406,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.466,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.516,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.566,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.616,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.658,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.699,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.741,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.782,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.832,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.897,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.96,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            }
           ]
         },
         {
@@ -80,29 +318,141 @@
           "loops": 3,
           "stages": [
             {
-              "tags": ["intensity.high"],
+              "tags": [
+                "intensity.high"
+              ],
               "name": "Intense",
-              "clips": ["OSF/Seduce/Animations/bridge03bot.af", "OSF/Seduce/Animations/bridge03top.af"]
-            }
-          ],
-          "sound": [
-            {
-              "role": "bottom",
-              "repeat": "loop",
-              "spec": "$seduce,{gender},moan",
-              "at": {"loud": [0.05, 0.2, 0.325, 0.475, 0.575, 0.7, 0.838, 0.963]}
-            },
-            {
-              "role": "top",
-              "repeat": "loop",
-              "spec": "$seduce,{gender},moan",
-              "at": {"loud": [0.1, 0.25, 0.525, 0.65, 0.888], "med": [0.375, 0.75]}
+              "clips": [
+                "OSF/Seduce/Animations/bridge03bot.af",
+                "OSF/Seduce/Animations/bridge03top.af"
+              ]
             }
           ],
           "edges": [
-            {"to": "climax", "when": "loops"},
-            {"id": "next", "label": "Continue", "to": "climax", "when": "advance", "default": true},
-            {"id": "climax", "label": "Finish", "to": "climax", "when": "advance"}
+            {
+              "to": "climax",
+              "when": "loops"
+            },
+            {
+              "id": "next",
+              "label": "Continue",
+              "to": "climax",
+              "when": "advance",
+              "default": true
+            },
+            {
+              "id": "climax",
+              "label": "Finish",
+              "to": "climax",
+              "when": "advance"
+            }
+          ],
+          "cue": [
+            {
+              "at": 0.05,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.1,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.2,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.25,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.325,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.375,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.475,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.525,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.575,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.65,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.7,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.75,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.838,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.888,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.963,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            }
           ]
         },
         {
@@ -110,25 +460,101 @@
           "loops": 1,
           "stages": [
             {
-              "tags": ["intensity.high"],
+              "tags": [
+                "intensity.high"
+              ],
               "name": "Finishing",
-              "clips": ["OSF/Seduce/Animations/bridge03bot.af", "OSF/Seduce/Animations/bridge03top.af"]
+              "clips": [
+                "OSF/Seduce/Animations/bridge03bot.af",
+                "OSF/Seduce/Animations/bridge03top.af"
+              ]
             }
           ],
-          "sound": [
+          "cue": [
             {
+              "at": 0.06,
+              "id": "beat",
               "role": "bottom",
-              "spec": "$seduce,{gender},moan",
-              "at": {"loud": [0.06, 0.19, 0.28], "low": [0.62, 0.88]}
+              "delivery": "native"
             },
-            {"role": "bottom", "spec": "$seduce,{gender},climax", "at": [0.32]},
-            {"role": "top", "spec": "$seduce,{gender},moan", "at": {"loud": [0.13, 0.24], "low": [0.75]}},
-            {"role": "top", "spec": "$seduce,{gender},climax", "at": [0.35]}
+            {
+              "at": 0.13,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native"
+            },
+            {
+              "at": 0.19,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native"
+            },
+            {
+              "at": 0.24,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native"
+            },
+            {
+              "at": 0.28,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native"
+            },
+            {
+              "at": 0.32,
+              "id": "climax",
+              "role": "bottom"
+            },
+            {
+              "at": 0.35,
+              "id": "climax",
+              "role": "top"
+            },
+            {
+              "at": 0.62,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native"
+            },
+            {
+              "at": 0.75,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native"
+            },
+            {
+              "at": 0.88,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native"
+            }
           ],
-          "cue": [{"at": 0.32, "id": "climax", "role": "bottom"}, {"at": 0.35, "id": "climax", "role": "top"}],
           "edges": [
-            {"to": "$end", "when": "loops"},
-            {"id": "next", "label": "End", "to": "$end", "when": "advance", "default": true}
+            {
+              "to": "$end",
+              "when": "loops"
+            },
+            {
+              "id": "next",
+              "label": "End",
+              "to": "$end",
+              "when": "advance",
+              "default": true
+            }
+          ]
+        }
+      ],
+      "roles": [
+        {
+          "name": "bottom",
+          "gender": "any"
+        },
+        {
+          "name": "top",
+          "gender": "any",
+          "preserveBones": [
+            "C_GenitalsRoot"
           ]
         }
       ]
@@ -136,38 +562,143 @@
     {
       "id": "osf_seduce_downdog",
       "name": "Seduce Down Dog",
-      "tags": ["osf", "seduce", "paired", "downdog", "adult", "mf", "mm", "ff"],
+      "tags": [
+        "osf",
+        "seduce",
+        "paired",
+        "downdog",
+        "adult",
+        "mf",
+        "mm",
+        "ff"
+      ],
       "entry": "intro",
-      "linearStages": ["intro", "build", "intense", "climax"],
+      "linearStages": [
+        "intro",
+        "build",
+        "intense",
+        "climax"
+      ],
       "nodes": [
         {
           "id": "intro",
           "loops": 1,
           "stages": [
             {
-              "tags": ["intensity.low"],
+              "tags": [
+                "intensity.low"
+              ],
               "name": "Introduction",
-              "clips": ["OSF/Seduce/Animations/downdog01bot.af", "OSF/Seduce/Animations/downdog01top.af"]
-            }
-          ],
-          "sound": [
-            {
-              "role": "bottom",
-              "repeat": "loop",
-              "spec": "$seduce,{gender},moan",
-              "at": {"med": [0.04, 0.225, 0.41], "low": [0.56, 0.7, 0.84]}
-            },
-            {
-              "role": "top",
-              "repeat": "loop",
-              "spec": "$seduce,{gender},moan",
-              "at": {"low": [0.12, 0.3, 0.62, 0.76, 0.9], "med": [0.47]}
+              "clips": [
+                "OSF/Seduce/Animations/downdog01bot.af",
+                "OSF/Seduce/Animations/downdog01top.af"
+              ]
             }
           ],
           "edges": [
-            {"to": "build", "when": "loops"},
-            {"id": "next", "label": "Continue", "to": "build", "when": "advance", "default": true},
-            {"id": "climax", "label": "Finish", "to": "climax", "when": "advance"}
+            {
+              "to": "build",
+              "when": "loops"
+            },
+            {
+              "id": "next",
+              "label": "Continue",
+              "to": "build",
+              "when": "advance",
+              "default": true
+            },
+            {
+              "id": "climax",
+              "label": "Finish",
+              "to": "climax",
+              "when": "advance"
+            }
+          ],
+          "cue": [
+            {
+              "at": 0.04,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.12,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.225,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.3,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.41,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.47,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.56,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.62,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.7,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.76,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.84,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.9,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            }
           ]
         },
         {
@@ -176,29 +707,162 @@
           "loops": 3,
           "stages": [
             {
-              "tags": ["intensity.medium"],
+              "tags": [
+                "intensity.medium"
+              ],
               "name": "Steady",
-              "clips": ["OSF/Seduce/Animations/downdog02bot.af", "OSF/Seduce/Animations/downdog02top.af"]
-            }
-          ],
-          "sound": [
-            {
-              "role": "bottom",
-              "repeat": "loop",
-              "spec": "$seduce,{gender},moan",
-              "at": {"low": [0.04, 0.165, 0.29, 0.415, 0.525, 0.79], "loud": [0.625, 0.71, 0.905]}
-            },
-            {
-              "role": "top",
-              "repeat": "loop",
-              "spec": "$seduce,{gender},moan",
-              "at": {"low": [0.1, 0.23, 0.355, 0.475, 0.575, 0.965], "loud": [0.665, 0.75, 0.84]}
+              "clips": [
+                "OSF/Seduce/Animations/downdog02bot.af",
+                "OSF/Seduce/Animations/downdog02top.af"
+              ]
             }
           ],
           "edges": [
-            {"to": "intense", "when": "loops"},
-            {"id": "next", "label": "Continue", "to": "intense", "when": "advance", "default": true},
-            {"id": "climax", "label": "Finish", "to": "climax", "when": "advance"}
+            {
+              "to": "intense",
+              "when": "loops"
+            },
+            {
+              "id": "next",
+              "label": "Continue",
+              "to": "intense",
+              "when": "advance",
+              "default": true
+            },
+            {
+              "id": "climax",
+              "label": "Finish",
+              "to": "climax",
+              "when": "advance"
+            }
+          ],
+          "cue": [
+            {
+              "at": 0.04,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.1,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.165,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.23,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.29,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.355,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.415,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.475,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.525,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.575,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.625,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.665,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.71,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.75,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.79,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.84,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.905,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.965,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            }
           ]
         },
         {
@@ -207,29 +871,141 @@
           "loops": 3,
           "stages": [
             {
-              "tags": ["intensity.high"],
+              "tags": [
+                "intensity.high"
+              ],
               "name": "Intense",
-              "clips": ["OSF/Seduce/Animations/downdog03bot.af", "OSF/Seduce/Animations/downdog03top.af"]
-            }
-          ],
-          "sound": [
-            {
-              "role": "bottom",
-              "repeat": "loop",
-              "spec": "$seduce,{gender},moan",
-              "at": {"loud": [0.055, 0.205, 0.33, 0.48, 0.58, 0.705, 0.84, 0.965]}
-            },
-            {
-              "role": "top",
-              "repeat": "loop",
-              "spec": "$seduce,{gender},moan",
-              "at": {"loud": [0.11, 0.26, 0.535, 0.66, 0.895], "med": [0.385, 0.76]}
+              "clips": [
+                "OSF/Seduce/Animations/downdog03bot.af",
+                "OSF/Seduce/Animations/downdog03top.af"
+              ]
             }
           ],
           "edges": [
-            {"to": "climax", "when": "loops"},
-            {"id": "next", "label": "Continue", "to": "climax", "when": "advance", "default": true},
-            {"id": "climax", "label": "Finish", "to": "climax", "when": "advance"}
+            {
+              "to": "climax",
+              "when": "loops"
+            },
+            {
+              "id": "next",
+              "label": "Continue",
+              "to": "climax",
+              "when": "advance",
+              "default": true
+            },
+            {
+              "id": "climax",
+              "label": "Finish",
+              "to": "climax",
+              "when": "advance"
+            }
+          ],
+          "cue": [
+            {
+              "at": 0.055,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.11,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.205,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.26,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.33,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.385,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.48,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.535,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.58,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.66,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.705,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.76,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.84,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.895,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native",
+              "repeat": "loop"
+            },
+            {
+              "at": 0.965,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native",
+              "repeat": "loop"
+            }
           ]
         },
         {
@@ -237,25 +1013,101 @@
           "loops": 1,
           "stages": [
             {
-              "tags": ["intensity.high"],
+              "tags": [
+                "intensity.high"
+              ],
               "name": "Finishing",
-              "clips": ["OSF/Seduce/Animations/downdog03bot.af", "OSF/Seduce/Animations/downdog03top.af"]
+              "clips": [
+                "OSF/Seduce/Animations/downdog03bot.af",
+                "OSF/Seduce/Animations/downdog03top.af"
+              ]
             }
           ],
-          "sound": [
+          "cue": [
             {
+              "at": 0.065,
+              "id": "beat",
               "role": "bottom",
-              "spec": "$seduce,{gender},moan",
-              "at": {"loud": [0.065, 0.195, 0.285], "low": [0.625, 0.885]}
+              "delivery": "native"
             },
-            {"role": "bottom", "spec": "$seduce,{gender},climax", "at": [0.33]},
-            {"role": "top", "spec": "$seduce,{gender},moan", "at": {"loud": [0.14, 0.25], "low": [0.76]}},
-            {"role": "top", "spec": "$seduce,{gender},climax", "at": [0.36]}
+            {
+              "at": 0.14,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native"
+            },
+            {
+              "at": 0.195,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native"
+            },
+            {
+              "at": 0.25,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native"
+            },
+            {
+              "at": 0.285,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native"
+            },
+            {
+              "at": 0.33,
+              "id": "climax",
+              "role": "bottom"
+            },
+            {
+              "at": 0.36,
+              "id": "climax",
+              "role": "top"
+            },
+            {
+              "at": 0.625,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native"
+            },
+            {
+              "at": 0.76,
+              "id": "beat",
+              "role": "top",
+              "delivery": "native"
+            },
+            {
+              "at": 0.885,
+              "id": "beat",
+              "role": "bottom",
+              "delivery": "native"
+            }
           ],
-          "cue": [{"at": 0.33, "id": "climax", "role": "bottom"}, {"at": 0.36, "id": "climax", "role": "top"}],
           "edges": [
-            {"to": "$end", "when": "loops"},
-            {"id": "next", "label": "End", "to": "$end", "when": "advance", "default": true}
+            {
+              "to": "$end",
+              "when": "loops"
+            },
+            {
+              "id": "next",
+              "label": "End",
+              "to": "$end",
+              "when": "advance",
+              "default": true
+            }
+          ]
+        }
+      ],
+      "roles": [
+        {
+          "name": "bottom",
+          "gender": "any"
+        },
+        {
+          "name": "top",
+          "gender": "any",
+          "preserveBones": [
+            "C_GenitalsRoot"
           ]
         }
       ]
