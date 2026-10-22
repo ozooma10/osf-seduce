@@ -7,8 +7,12 @@
   "vocabulary": {
     "osf.intimacy.core": 2
   },
-  "scenes": {
-    "osf_seduce_bridge": {
+  "nodes": {
+    "osf_seduce_bridge.intro": {
+      "motion": {
+        "scene": "osf_seduce_bridge",
+        "node": "intro"
+      },
       "roles": {
         "bottom": {
           "requires": [
@@ -26,47 +30,14 @@
           "voice": "generated"
         }
       },
-      "nodes": {
-        "intro": {
-          "pose": "bridge",
-          "acts": []
-        },
-        "build": {
-          "pose": "bridge",
-          "acts": [
-            {
-              "act": "vaginal",
-              "by": "top",
-              "to": "bottom",
-              "pace": "steady"
-            }
-          ]
-        },
-        "intense": {
-          "pose": "bridge",
-          "acts": [
-            {
-              "act": "vaginal",
-              "by": "top",
-              "to": "bottom",
-              "pace": "fast"
-            }
-          ]
-        },
-        "climax": {
-          "pose": "bridge",
-          "acts": [
-            {
-              "act": "vaginal",
-              "by": "top",
-              "to": "bottom",
-              "pace": "steady"
-            }
-          ]
-        }
-      }
+      "pose": "bridge",
+      "acts": []
     },
-    "osf_seduce_downdog": {
+    "osf_seduce_bridge.build": {
+      "motion": {
+        "scene": "osf_seduce_bridge",
+        "node": "build"
+      },
       "roles": {
         "bottom": {
           "requires": [
@@ -84,45 +55,200 @@
           "voice": "generated"
         }
       },
-      "nodes": {
-        "intro": {
-          "pose": "down_dog",
-          "acts": []
-        },
-        "build": {
-          "pose": "down_dog",
-          "acts": [
-            {
-              "act": "vaginal",
-              "by": "top",
-              "to": "bottom",
-              "pace": "steady"
-            }
-          ]
-        },
-        "intense": {
-          "pose": "down_dog",
-          "acts": [
-            {
-              "act": "vaginal",
-              "by": "top",
-              "to": "bottom",
-              "pace": "fast"
-            }
-          ]
-        },
-        "climax": {
-          "pose": "down_dog",
-          "acts": [
-            {
-              "act": "vaginal",
-              "by": "top",
-              "to": "bottom",
-              "pace": "steady"
-            }
-          ]
+      "pose": "bridge",
+      "acts": [
+        {
+          "act": "vaginal",
+          "by": "top",
+          "to": "bottom",
+          "pace": "steady"
         }
-      }
+      ]
+    },
+    "osf_seduce_bridge.intense": {
+      "motion": {
+        "scene": "osf_seduce_bridge",
+        "node": "intense"
+      },
+      "roles": {
+        "bottom": {
+          "requires": [
+            "anatomy.vagina",
+            "access.vaginal"
+          ],
+          "voice": "generated"
+        },
+        "top": {
+          "requires": [
+            "anatomy.penis",
+            "penis.erect"
+          ],
+          "fit": "haters-extended-male-erect-v1",
+          "voice": "generated"
+        }
+      },
+      "pose": "bridge",
+      "acts": [
+        {
+          "act": "vaginal",
+          "by": "top",
+          "to": "bottom",
+          "pace": "fast"
+        }
+      ]
+    },
+    "osf_seduce_bridge.climax": {
+      "motion": {
+        "scene": "osf_seduce_bridge",
+        "node": "climax"
+      },
+      "roles": {
+        "bottom": {
+          "requires": [
+            "anatomy.vagina",
+            "access.vaginal"
+          ],
+          "voice": "generated"
+        },
+        "top": {
+          "requires": [
+            "anatomy.penis",
+            "penis.erect"
+          ],
+          "fit": "haters-extended-male-erect-v1",
+          "voice": "generated"
+        }
+      },
+      "pose": "bridge",
+      "acts": [
+        {
+          "act": "vaginal",
+          "by": "top",
+          "to": "bottom",
+          "pace": "steady"
+        }
+      ]
+    },
+    "osf_seduce_downdog.intro": {
+      "motion": {
+        "scene": "osf_seduce_downdog",
+        "node": "intro"
+      },
+      "roles": {
+        "bottom": {
+          "requires": [
+            "anatomy.vagina",
+            "access.vaginal"
+          ],
+          "voice": "generated"
+        },
+        "top": {
+          "requires": [
+            "anatomy.penis",
+            "penis.erect"
+          ],
+          "fit": "haters-extended-male-erect-v1",
+          "voice": "generated"
+        }
+      },
+      "pose": "down_dog",
+      "acts": []
+    },
+    "osf_seduce_downdog.build": {
+      "motion": {
+        "scene": "osf_seduce_downdog",
+        "node": "build"
+      },
+      "roles": {
+        "bottom": {
+          "requires": [
+            "anatomy.vagina",
+            "access.vaginal"
+          ],
+          "voice": "generated"
+        },
+        "top": {
+          "requires": [
+            "anatomy.penis",
+            "penis.erect"
+          ],
+          "fit": "haters-extended-male-erect-v1",
+          "voice": "generated"
+        }
+      },
+      "pose": "down_dog",
+      "acts": [
+        {
+          "act": "vaginal",
+          "by": "top",
+          "to": "bottom",
+          "pace": "steady"
+        }
+      ]
+    },
+    "osf_seduce_downdog.intense": {
+      "motion": {
+        "scene": "osf_seduce_downdog",
+        "node": "intense"
+      },
+      "roles": {
+        "bottom": {
+          "requires": [
+            "anatomy.vagina",
+            "access.vaginal"
+          ],
+          "voice": "generated"
+        },
+        "top": {
+          "requires": [
+            "anatomy.penis",
+            "penis.erect"
+          ],
+          "fit": "haters-extended-male-erect-v1",
+          "voice": "generated"
+        }
+      },
+      "pose": "down_dog",
+      "acts": [
+        {
+          "act": "vaginal",
+          "by": "top",
+          "to": "bottom",
+          "pace": "fast"
+        }
+      ]
+    },
+    "osf_seduce_downdog.climax": {
+      "motion": {
+        "scene": "osf_seduce_downdog",
+        "node": "climax"
+      },
+      "roles": {
+        "bottom": {
+          "requires": [
+            "anatomy.vagina",
+            "access.vaginal"
+          ],
+          "voice": "generated"
+        },
+        "top": {
+          "requires": [
+            "anatomy.penis",
+            "penis.erect"
+          ],
+          "fit": "haters-extended-male-erect-v1",
+          "voice": "generated"
+        }
+      },
+      "pose": "down_dog",
+      "acts": [
+        {
+          "act": "vaginal",
+          "by": "top",
+          "to": "bottom",
+          "pace": "steady"
+        }
+      ]
     }
   }
 }
