@@ -5,7 +5,7 @@
   "revision": 1,
   "kind": "base",
   "vocabulary": {
-    "osf.intimacy.core": 1
+    "osf.intimacy.core": 2
   },
   "scenes": {
     "osf_seduce_bridge": {
