@@ -30,7 +30,8 @@
           "voice": "generated"
         }
       },
-      "pose": "bridge",
+      "entryPose": "bridge",
+      "exitPose": "bridge",
       "acts": []
     },
     "osf_seduce_bridge.build": {
@@ -55,7 +56,8 @@
           "voice": "generated"
         }
       },
-      "pose": "bridge",
+      "entryPose": "bridge",
+      "exitPose": "bridge",
       "acts": [
         {
           "act": "vaginal",
@@ -87,7 +89,8 @@
           "voice": "generated"
         }
       },
-      "pose": "bridge",
+      "entryPose": "bridge",
+      "exitPose": "bridge",
       "acts": [
         {
           "act": "vaginal",
@@ -119,7 +122,8 @@
           "voice": "generated"
         }
       },
-      "pose": "bridge",
+      "entryPose": "bridge",
+      "exitPose": "bridge",
       "acts": [
         {
           "act": "vaginal",
@@ -151,7 +155,8 @@
           "voice": "generated"
         }
       },
-      "pose": "down_dog",
+      "entryPose": "down_dog",
+      "exitPose": "down_dog",
       "acts": []
     },
     "osf_seduce_downdog.build": {
@@ -176,7 +181,8 @@
           "voice": "generated"
         }
       },
-      "pose": "down_dog",
+      "entryPose": "down_dog",
+      "exitPose": "down_dog",
       "acts": [
         {
           "act": "vaginal",
@@ -208,7 +214,8 @@
           "voice": "generated"
         }
       },
-      "pose": "down_dog",
+      "entryPose": "down_dog",
+      "exitPose": "down_dog",
       "acts": [
         {
           "act": "vaginal",
@@ -240,7 +247,8 @@
           "voice": "generated"
         }
       },
-      "pose": "down_dog",
+      "entryPose": "down_dog",
+      "exitPose": "down_dog",
       "acts": [
         {
           "act": "vaginal",
