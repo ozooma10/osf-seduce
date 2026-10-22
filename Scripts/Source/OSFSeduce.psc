@@ -64,7 +64,7 @@ Function Play(string asId, Actor akBottom, Actor akTop, OSFTypes:SceneOptions ak
         req.Control = OSFIntimacy.CONTROL_PLAYER()
         req.Tags = "paired"
         req.AnyTags = "bridge,downdog"
-        req.AllowPoolSwitching = true
+        req.Navigation = "pool"
     endif
     StartEncounter(akBottom, akTop, req, "Play " + asId)
 EndFunction
@@ -92,7 +92,7 @@ Function PlayTag(string asSubTag, Actor akBottom, Actor akTop, OSFTypes:SceneOpt
         req.Control = OSFIntimacy.CONTROL_PLAYER()
         req.Tags = "paired"
         req.AnyTags = "bridge,downdog"
-        req.AllowPoolSwitching = true
+        req.Navigation = "pool"
     endif
     StartEncounter(akBottom, akTop, req, "PlayTag " + asSubTag)
 EndFunction
